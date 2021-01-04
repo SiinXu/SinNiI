@@ -39,3 +39,6 @@
 邮箱：sin9607@outlook.com
 
 公众号：森逆SinNiI，获取最新更新
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/5KthuZRaJYL2fpRnf4xS2iaSQibib8vbCB0ptkTfs97yvibI1Du4ribREyAQprBYXo7hqFuC9gOPbSezS9kKv4R3VPQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
