@@ -1,0 +1,6214 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8" />
+        <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+        <title>产品经理必懂的技术那点事儿成为全栈产品经理 唐韧</title>
+        <style>
+          html {
+            margin: 0;
+            padding: 0;
+          }
+
+          @font-face {
+  font-family: 'mm-iconfont';
+  src: url('data:application/font-woff2;charset=utf-8;base64,d09GMgABAAAAAAVcAA0AAAAADSAAAAUHAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP0ZGVE0cGh4GVgCCShEICo0IigYLGAABNgIkAx4EIAWFLAd0G58KyI7S1LBNkiTFr/P/+6Z638ziLBkIQ8wrsxwEKUmBA4Dwlfarxzy8f+PP7b21ZXFa6IFleXg1a60AqO3LF3jX79fq2xMRxM/jDd1CpYX3FxcP1SqJuY6YNU3FUiQ2jtU11Up8H/EkAATA3TXpGgA83rt/vfLZBDABYQCGcAKRAAxAFXRBBnayKwD+gZ+nPyqFBjBygXL/DlvTIWjwo3cVuK8s9Sl++AEEEjlOjElBk3hilJIMpUKKY21LyxouyaqeWOQjuRrUI+IKdQAY7d9DwI5a04k3MIQFzgG2AOwIKjVqJIrYTsbHABOn6EE+VdOSA1gHO0CS9GBxkMQUvqKqmhP23oxVltyoYu+7Facuv129xJ6zAUpuNJw/Noer8zbl/7HRtyFEqCv9mw2LZ3VXCfF7ULGQwXk1E0zFkant5pHX+SO069xIZQFP7GuSunhzT+uPuaGY8wjz93lhNH9+VyPuCPieEDFvrGZaKEn8By0/Xn3v0RVHUmC89ZOhDlh3jGjeou4WwZ4VRP5wFNIcni96pNDC/qa/zwFLw/qDuH+eGGTtvRnLltyoYu67FceX3+5qwVyZ4I0Xa9BhhYiSnsziTU5ZezSSLTiSYq47FsUXHwcvFjNkwu3NBXzMKiJ/15BtsMQ1xgy5e7/7/fvd7t3pcudO16737nWjDd3v3u16ULnTY0/s1yP0/Scmui+Y0HDii4p2hF3JmehUsiKsiv/3cSrHVX6R/IJJdzYQ9r9pP26TdOc/zP6LnbKg9ZkfiIwv+XOzYQe94qkIvdk05Kn/lyMsmm8KPh98KGQVX3h25WBxRS+vXRVyjG6mfDgvpohyqM+M8zOu6OX0K63v9aXZ8EOl+hM99FbLkGeTpl4Nig85BNS98ahbdCwAz502byvV8h3Wg/UjvlpDaulHWXJ45xmpkR+vfH/c0lR+U6qRDFPFMasTvr+qVeUxFMVUJpGYeohQqEP2nPx5SKO4ooVwruVuCjlnklU9Hy5kSay6LNeiYqv7PjU71+oQWCgHdmB+QcB1t5V7+623sbeXXsGLgy+EbAxegxZ1XtyouW5Ld5F9q9GtCZ11Z2HDJg27dS5c0djIMyrvwL1Elbgmbkv3nTmpbTx5a58ZEeHlIiJmhEeUCw87OCNCZSJMkqK4nWJa+E70KviUNnlpz8pnolu0atLWPDd5Ye+6N0Latm/RSb7VtNuTc6v4gwfcUq568CBa6AgAAAnf3mlYOr2/U+eHZkg41F2gtCyzuA+AhmkRcXiKqLkGv0G0LKl6EWquoiXD9ua35Kvrb/DSahlAIBNQhmOQZyAoDJUTmoihl4lRjTZxhnkgcQ+BzH1GFGkwk5AdnosNwXEIHFUdQBaAiYRpZGJsHhMXZjJI3FUgc8+Bwv1kErqFfbIhLWZBaGw410AjbdshEgwyzrnAYKW8POuMJEDcicMjIvxjg+tAiRK5pAole26Fi4FOXHlGKTbQcPjt4uTbTV5w7sY13AgFgxNUVE4FuIWzBBXLVegDmsd7+xlrL3oZYbQ8lXKUI3lyPYaTxhIJmrG5rmK9vlSCoflfKeQabKRy8CCw7YjReZVGjvRc/8Gn3vEiLOr74PlAfv+1Q9VSHs/l6Tm/nMFjJuLiPNHTGI9vR5xALUQwYDyIsGDESSKZFFJJI908y2iXWzJq0Cj5RDdOO6nFE954+YIpXx1UcFoaLx+TN/EhpYPVt1cBAA==') format('woff2'),
+      url('data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAfMAA0AAAAADSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAHsAAAABoAAAAcjQ+WV0dERUYAAAeQAAAAHgAAAB4AKQART1MvMgAAAaAAAABCAAAAVjxwSCNjbWFwAAAB/AAAAEkAAAFK5m7pl2dhc3AAAAeIAAAACAAAAAj//wADZ2x5ZgAAAmAAAAN8AAAGiB3BA0toZWFkAAABMAAAADAAAAA2GiKzS2hoZWEAAAFgAAAAHQAAACQHcAOFaG10eAAAAeQAAAAYAAAAHg2lAQZsb2NhAAACSAAAABgAAAAYB5YI6G1heHAAAAGAAAAAHwAAACABHQB6bmFtZQAABdwAAAFNAAACrJtyy2Nwb3N0AAAHLAAAAFkAAAB0hhp62HjaY2BkYGAA4iTORQfi+W2+MnCzMIDA7a3bl8Nptv8NzJOYG4BcDgYmkCgASEMMAXjaY2BkYGBu+N/AEMPCAALMkxgYGVABCwBRzAL+AAAAeNpjYGRgYOBmyGPgYAABJiDmAkIGhv9gPgMAFOkBmAB42mNgZGFgnMDAysDA1Ml0hoGBoR9CM75mMGLkAIoysDIzYAUBaa4pDA7PGJ8ZMDf8b2CIYW5kaAQKM4LkAN52DA4AAHjaY2GAABYIZmPwBMI8MPRkaAAAEskCuHjaY2BgYGaAYBkGRgYQcAHyGMF8FgYNIM0GpBkZmJ4xPjP4/5+BAUhr/f8vxSR5C6oeCBjZGOAcRiYgwcSAChgZhj0AAM5gCc8AAAAAAAAAAAAAAACYAPQBjgH2Al4CugMSA0R42o1UT2zTdhR+z26c2ooduXbiEIdkjhtnKzRMThuXqI34syKlaDBp1ZD2hwMMkJAojAPigKAwDrtsmjggDcSFcoALEtzWy05rx20r5VAEhx2oYOyI2CVxeT+7JU0h0RTne9/zTy953/f8DL0grFzjv+DPQhxysAU82A374Ss4BoBZNFQFo1YJi2oNvYilYELVk2XLrXhqCdFN6kLULuFQhW61uMf4Fsw7xO11vNDhPvfv4Cji6GDzchi5c83LcV2Pc+fiOqLucyyxGeBthq/fwn8MfmTQ3zrecJM/iyMDjecDI0iRT1HchX1K47miaQqfUvqaM3qW/U1WX4uLIQ+vtgQAeqC+Ms1P8dPQC2kYgCr5ZKmWaued4YLl5jDJPLMtSskzjXwxEmFeHK6hUXaTmzF0iuXcT36C+25KUpr/cOO6cimGaGrN7VoG03N4WJIRZcm/EcZ5SQ6AOG83ZrlfFWlB+UHWGs9009T5m3raPyhL20SFQJJfyFIprKNAfQttfY/Bp/ANnHindxqvEPY+VNFo5Fmk+SfKWQybTqxrfwxL6FlhzkrGaPRGkIdyW3nrnOTq3OmTIpNb15XzciYQmzmDW/P0lBVyVTEWE6shpm05/gRjgigK/quoKEYZx951yepB4MasLD6Mf6/0Nf5edcP0B/PbED/eMSi4GBM1UcZvFQpksbPphfzBhCRUBCmAW2J0WOgVo+WoyCj7eQLm2RR5dmXVsw9hBEZhR8uz4ns8ywuU0jZQ4tgFq32DDCtheaqtcvdp6qdP0niaL8kH+bxs6s0q9f2Y4yNYjfCcP4dVx6UNc/y5IKp4xL++uLuT1KNU8iASQY/jJ1nRg7AYPcf9c2LZv4JTAO16TPgIttNzsLOrnvL/EJSwh98VlNaaI7qZ1v7oruj6rg2KtExa429pmW6KrtbjCwsb9aQhCyVwodJ9PnTyPhHs03Eqj/AT/w4eNwuI/Rn/ahBzrHv27TgR/zfcOckKfsn0s0I8ZhbG68t16jvStosOdV3rvomWS1tEGe2QsZ6XGae3KPFOq3UXf06l/FOGsRbvsatT1zNGKZUqGbP0JbYagIdpAH6aZ47LsAlAxGTFq2HREaIK5uhFUAzeFYaC3Ev/4pe/18flC1//ta8u7Hk6s9TTszQTIFf0Dw1l9u6bv1ZLfPb5wwPzaweEbwCNs0tEeNqNkT9OwzAYxZ/7D9FIHUAwe2IAmv4ZO1Kp7Awd2NrUCa2SOHLcSl04BAMH4Bg9AMfgAD0Fr+HrUpbGyqefn5/fl9gArvADhb/nBo/CCgFehWu4wEa4Tv1TuEHeCTfJx5wWAlUTbuNBxcIBrtWOCapxydl9lXZghVs8CdfQQSxcp/4u3CB/CTfJ38It8l64janqCAe4Ux9UxnAwmMGzLqAxx5Z1iQgWOTsdqqcP7bEzM28Wer7Vy8jmsc095Yyj+8+PLOseTcALsxOskbKP49Qk63Tmztt7jmfKfIeSrsOqxgAh+pSNK5c214Owf17OM3PyKuv0PEreb4IhVc+9mq9jQkaaSJLh36VkjaJaW1GJqIeMNblxx6MrN8nQ+1jHzmZ6wrYmTa0unF2ZyNP8VvUoMEKPIz5JD6vvz2jzvhj1erEEhJHN8AuKq3jTAAAAeNpdiEsOgCAQxXgogp+reChxJnESgUTQ86u4s4smrdLqY6iG+jPWq6HRoIVBBwuHfgoci6Q4h9Ofhg652AWJFFNhkzfmYr2Uxe9P7ULcUFotSX7PDa0DFeMAAAAAAAAB//8AAgABAAAADAAAABYAAAACAAEAAwAKAAEABAAAAAIAAAAAeNpjYGBgZACCq0vUOUD07a3bl8NoAEb7B4YAAA==') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.mm-iconfont::before {
+  font-family: 'mm-iconfont', sans-serif !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+          .mention[data-type='1']::before,
+          .mention[data-type='3']::before,
+          .mention[data-type='8']::before,
+          .mention[data-type='11']::before,
+          .mention[data-type='12']::before,
+          .mention[data-type='15']::before,
+          .mention[data-type='16']::before {
+            content: '\e62f';
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: -4px;
+            font-size: inherit;
+          }
+          .mention[data-type='3']::before {
+            content: '\e62c';
+          }
+          .mention[data-type='8']::before {
+            content: '\e62d';
+          }
+          .mention[data-type='11']::before {
+            content: '\e62b';
+          }
+          .mention[data-type='12']::before {
+            content: '\e62a';
+          }
+          .mention[data-type='15']::before {
+            content: '\e62e';
+          }
+
+          body {
+            margin: 50px 20px;
+            padding: 0;
+            color: #333;
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'PingFang SC',
+                  Helvetica, Arial, 'Microsoft YaHei', 微软雅黑, 黑体, Heiti, sans-serif,
+                  SimSun, 宋体, serif,
+                  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+          }
+
+          body.narrow {
+            max-width: 790px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+
+          .title {
+            min-height: 40px;
+            padding-left: 10px;
+            padding-bottom: 24px;
+            margin-bottom: 20px;
+            line-height: 40px;
+            font-size: 26px;
+            font-weight: 500;
+            border-bottom: 1px solid #e5e6e8;
+          }
+
+          .node-list {
+            margin: 0 0 0 28px;
+            padding: 0;
+            list-style: none;
+          }
+
+          .node {
+            position: relative;
+          }
+
+          .node.drill-node > .content {
+            margin-bottom: 15px;
+            font-size: 20px;
+            line-height: 28px;
+          }
+
+          .node.drill-node > .note {
+            margin-bottom: 10px;
+          }
+
+          .content {
+            min-height: 24px;
+            padding-top: 2px;
+            padding-bottom: 3px;
+            line-height: 24px;
+            font-size: 16px;
+          }
+
+          .note {
+            position: relative;
+            padding-bottom: 2px;
+            line-height: 22px;
+            font-size: 14px;
+            color: #888;
+            white-space: pre-wrap;
+          }
+
+          .content > *,
+          .note > * {
+            padding-top: 2px;
+            padding-bottom: 2px;
+          }
+
+          .note:empty {
+            padding-bottom: 0;
+          }
+
+          .node.finished .content,
+          .node.finished .note {
+            opacity: 0.5;
+          }
+
+          .node.finished > .content {
+            text-decoration: line-through;
+          }
+
+          .heading1 > .content {
+            min-height: 34px;
+            line-height: 34px;
+            font-size: 24px;
+            font-weight: 500;
+          }
+
+          .heading2 > .content {
+            min-height: 30px;
+            line-height: 30px;
+            font-size: 21px;
+            font-weight: 500;
+          }
+
+          .heading3 > .content {
+            min-height: 27px;
+            line-height: 27px;
+            font-size: 19px;
+            font-weight: 500;
+          }
+
+          .mention {
+            padding-left: 2px;
+            padding-right: 2px;
+            color: #5856d5;
+            word-break: break-all;
+            text-decoration: none;
+          }
+
+          .content-link {
+            color: unset;
+            opacity: 0.6;
+            word-break: break-all;
+          }
+
+          .tag {
+            text-decoration: underline;
+            opacity: 0.6;
+          }
+
+          .bold {
+            font-weight: bold;
+          }
+
+          .italic {
+            font-style: italic;
+          }
+
+          .underline {
+            text-decoration: underline;
+          }
+
+          .content .highlight-red,
+          .highlight-red > .content > * {
+            background-color: #fbbfbc;
+          }
+
+          .content .highlight-yellow,
+          .highlight-yellow > .content > * {
+            background-color: #f8e6ab;
+          }
+
+          .content .highlight-blue,
+          .highlight-blue > .content > * {
+            background-color: #bacefd;
+          }
+
+          .content .highlight-cyan,
+          .highlight-cyan > .content > * {
+            background-color: #a9efe6;
+          }
+
+          .content .highlight-pink,
+          .highlight-pink > .content > * {
+            background-color: #fdddef;
+          }
+
+          .content .highlight-olive,
+          .highlight-olive > .content > * {
+            background-color: #bbbfc4;
+          }
+
+          .content .highlight-grey,
+          .highlight-grey > .content > * {
+            background-color: #bbbfc4;
+          }
+
+          .text-color-red {
+            color: #dc2d1e;
+          }
+
+          .text-color-yellow {
+            color: #ffaf38;
+          }
+
+          .text-color-green {
+            color: #75c940;
+          }
+
+          .text-color-blue {
+            color: #3da8f5;
+          }
+
+          .text-color-purple {
+            color: #797ec9;
+          }
+
+          .bullet {
+            position: absolute;
+            left: -25px;
+            top: 5px;
+            width: 18px;
+            height: 18px;
+            border-radius: 9px;
+          }
+
+          .node.collapsed > .bullet {
+            background-color: #dee0e3;
+          }
+
+          .heading1 > .bullet {
+            top: 10px;
+          }
+
+          .heading2 > .bullet {
+            top: 8px;
+          }
+
+          .heading3 > .bullet {
+            top: 6px;
+          }
+
+          .bullet-dot {
+            position: absolute;
+            left: 6px;
+            top: 6px;
+            width: 6px;
+            height: 6px;
+            background-color: rgb(100, 106, 115);
+            border-radius: 3px;
+          }
+
+          .image-list {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+          }
+
+          .image-item {
+            padding-top: 2px;
+            padding-bottom: 8px;
+          }
+
+          .image {
+            display: block;
+            max-width: 100%;
+          }
+
+          .children {
+            position: relative;
+          }
+
+          .note::before,
+          .image-list::before,
+          .children::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -17px;
+            width: 1px;
+            height: 100%;
+            background-color: #dee0e3;
+          }
+
+          .node.drill-node > .note::before,
+          .node.drill-node > .image-list::before,
+          .node.drill-node > .children::before,
+          body.noline .note::before,
+          body.noline .image-list::before,
+          body.noline .children::before {
+            display: none;
+          }
+
+          .node.drill-node > .note,
+          .node.drill-node > .content,
+          .node.drill-node > .image-list,
+          .node.drill-node > .children {
+            margin-left: 10px;
+          }
+
+          body.noline .node-list {
+            margin-right: 20px;
+          }
+
+          .publish {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+          }
+
+          .publish-link {
+            color: #4694FF;
+          }
+
+          .node .mention.mm-iconfont::before {
+            content: '\e601';
+          }
+
+          .node .mention.mm-iconfont {
+             color: #5856d5;
+          }
+
+          @media print {
+            body {
+              margin-top: 0;
+              margin-bottom: 0;
+            }
+          }
+
+          @page {
+            margin-left: 0.25in;
+            margin-right: 0.25in;
+            margin-top: 0.5in;
+            margin-bottom: 0.5in;
+          }
+        </style>
+      </head>
+      <body >
+        <div class="title">产品经理必懂的技术那点事儿成为全栈产品经理 唐韧</div>
+        <ul class="node-list">
+    <li class="node heading1">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">整理信息</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>整理人：Sin</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>整理日期：20201229</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>公众号：</span><span class="bold text-color-yellow">森逆SinNiI</span></div>
+    <ul class="image-list">
+    <li class="image-item">
+    <img
+      src="https://api2.mubu.com/v3/document_image/f12c3039-f8d5-4679-a4ae-c5e3ef75cfe8-1253121.jpg"
+      style="width: 400px;"
+      crossorigin="anonymous"
+      class="image"
+    />
+  </li>
+  </ul>
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>关注公众号，获取更多最新内容，希望对您有帮助～</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading1">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">1 产品思维与技术思维</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">1.1 产品经理为什么要懂技术</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">产品思维</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">用户价值</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">使用价值</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">商业价值</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">业务闭环</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">技术思维</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">实现方式</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">技术架构</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">技术价值</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">开发成本</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">共同</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">需求</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">设计</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">功能</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">1.2 产品经理和工程师分别是干什么的</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>图1-2 技术职能结构图</span></div>
+    <ul class="image-list">
+    <li class="image-item">
+    <img
+      src="https://api2.mubu.com/v3/document_image/e72d3419-87f5-4c9f-8458-1f9cd181588e-1253121.jpg"
+      style="width: 400px;"
+      crossorigin="anonymous"
+      class="image"
+    />
+  </li>
+  </ul>
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">1.3 产品设计中需要注意的技术边界</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>在设计某一项产品功能时，需要考虑在现有技术条件下该功能能否被实现</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">1.4 工程师的思考方式：工程思维</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>工程思维往往是理性的逻辑思维，从实现的难易程度和系统的角度定义产品和设计产品。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">1.5 入门产品经理的思考方式：功能思维</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">1.6 高阶产品经理的思考方式：产品思维</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>按《用户体验要素》一书的观点，整个产品体系从下往上分为</span><span class="bold text-color-blue">战略层、范围层、结构层、框架层和表现层</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">最下层的战略层</span><span>决定了业务和产品需要实现什么目标，为谁和什么场景服务；</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">范围层</span><span>需要定义清楚在既有战略的基础上做哪些东西来实现战略目标；</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">结构层</span><span>需要基于范围层的内容完成基础信息架构和交互设计；</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">框架层</span><span>完成我们能看得到的界面设计；</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">表现层</span><span>则是视觉表现设计，让产品看起来更友好。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">一个完整的产品定义和设计过程都需要经历这5个阶段，缺失某一个阶段都会导致产品不完整，重点关注某一个阶段也会导致产品的不平衡，所以需要产品经理找到其中的平衡点。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">就重要性来说，越往下，重要程度越高。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">1.7 产品经理必须回答的8个问题</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">第一问：产品的目标用户是谁？</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>这不是一个“我是谁”的哲学问题，产品的目标用户直接决定了产品原则的设定标准。简单说，产品原则就是产品本身的道德准则，即坚持什么、抵制什么、做什么和不做什么。一个产品的目标用户往往是一个特定的人群，这群人会基于一个共性的需求来使用产品。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">第二问：产品为目标用户解决了一个什么核心问题？</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>用户只会因为产品的一个核心功能而使用产品。一 个产品往往具备很多功能，这些五花八门的功能看似解决了用户很多问题，但如果缺乏一个核心功能，这些附属功能是无法支撑整个产品的。</span><span class="bold text-color-yellow">产品为用户解决的核心问题就是产品功能的主路径，明确主路径之后，一切产品功能的添加和优化都需要围绕这个主路径展开。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">第三问：产品的核心功能是什么？</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>核心功能的选择决定了用户该如何使用产品。还是以微信为例，如果解决的核心问题是沟通，那核心功能可以是语音、可以是文字，也可以是视频。基于微信原始版本所处的时代和网络环境，选择实时文字短信收发作为核心功能是最合适的选择。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">第四问：产品的使用场景是什么？</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>产品设计必须依托于用户使用产品的具体场景。我们知道用户在什么样的场景下使用产品，即可以对该场景下如何更好地满足用户需求提供真实的现场感受，从而利用这种感受指导产品设计，也可以基于真实的使用场景优化产品定位。例如，阅读类产品有白天模式和夜晚模式，这种产品功能的设计是了解用户的真实使用场景后才能得到的洞见。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">第五问：产品给目标用户带来的价值是什么？</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>这个问题回答的是目标用户为什么要使用我们的产品。用户不会无缘无故使用我们的产品，我们需要给用户一个使用产品的理由。这个理由就是产品给用户带来的价值。价值的体现形式可以是物质的也可以是精神的。例如，司机使用滴滴出行的产品能带来实际的收入；我们使用微信和别人交流互动体现自己的存在感。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">第六问：如何用一句话介绍产品是什么？</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>这是一个最难也最容易的问题。难在回答这个问题需要对产品的本质有充分的理解，容易在通过简单的表象也能回答。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>例如，以比较火的国外社交产品Snapchat（色拉布）为例，这款产品的创始人用一句话介绍他们的公司和产品，“我们是一家照相机公司”。这个描述足够精炼也足够简单，让人非常好理解的同时给人无限的想象空间。因为Snapchat做的是一款图片类的社交产品，他们通过产品的设计传递一种将照片作为沟通载体的理念。所以，将自己比喻为一家照相机公司既能让别人听懂，也能让别人产生想象，这家新型的“照相机”公司究竟与传统的照相机公司有什么区别？这会激发人的好奇心和求知欲。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">第七问：与同类产品的定位差异是什么？</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>这个问题回答的是我们在别人眼里是谁，以及别人在我们眼里是谁。与同类产品的定位差异化是拉开产品和业务差距的核心。例如，百度基于搜索场景完成人与信息的连接，阿里巴巴基于购物场景完成人和商品的连接，腾讯基于社交场景完成人与人的连接。他们的定位各有差异，面向的市场也各不一样。即使他们的产品在功能上有重合，例如百度有搜索功能，阿里的天猫和淘宝同样有搜索功能，但定位决定了目标市场的差异化，也决定了公司的基因差异化。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">第八问：产品的盈利模式是什么？</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>不以赚钱为目的的生意都是耍流氓。情怀是给文艺青年玩的，追求是给理想青年玩的。一个正常公司的产品经理需要清楚地知道自己主导的产品究竟如何给公司创造商业价值。当然，互联网产品都是用户价值至上的，早期可以不考虑产品如何产生商业价值，等用户量达到一定规模，或者产品带来的用户价值足够明显时，再整体规划如何将产品商业化。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">1.8 本章小结</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>确把握什么是工程思维、什么是功能思维，以及什么是产品思维。产品经理设计的是产品，但产品不仅仅只有功能，产品是业务的表现形式，抓住业务的本质并洞悉用户，沉淀出关键功能的产品才是好产品。同时具备技术思维和产品思维的产品经理才是好产品经理。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading1">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">2 互联网技术与产品</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">2.1 互联网技术发展史</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>互联网发展阶段</span></div>
+    <ul class="image-list">
+    <li class="image-item">
+    <img
+      src="https://api2.mubu.com/v3/document_image/32a3e6ba-b373-4039-8714-ab40fc45d1a2-1253121.jpg"
+      style="width: 400px;"
+      crossorigin="anonymous"
+      class="image"
+    />
+  </li>
+  </ul>
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">2.2 互联网产品发展史</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">2.3 互联网开源社区和技术</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">2.3.1 使用最广泛的服务器操作系统：Linux</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>我们每天都在接触Linux，如今使用广泛的Android手机其底层系统使用的就是Linux，世界上很多超大型计算机使用的操作系统也是Linux。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>linux诞生于1991年，开发者可以通过互联网以免费的方式获取其源代码并做出修改后使用。Linux的发起者和创始人是美国人Linus Torvalds，他被称为“Linux之父”。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>Linux系统应用得非常广泛，可以安装和运行在各种计算机硬件设备中，比如台式计算机、智能手机、平板电脑、路由器及大型计算机或者超级计算机。Linux系统以可靠、安全、稳定、可扩展的特性在互联网技术领域得以广泛应用。Linux系统内核发布后，因其开源的特性和不受商业软件版权的限制，被全世界的技术人员持续完善和更新，一直到现在，Linux社区还保持着非常高的活跃度，Linux系统本身也在持续迭代更新着。Linux系统已经被应用于互联网的各种系统和产品中，是一种开放、共享精神的象征，也在早期为互联网共享精神的确立奠定了坚实的基础。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">2.3.2 网上支付的基础保障协议：OpenSSL</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>如今OpenSSL被运用到互联网产品的各个领域，例如我们习以为常的在线支付、网银、电商网站及门户网站和电子邮件等。今天我们能在互联网上进行在线购物交易及网上业务，在数据加密和安全性保障上都归功于OpenSSL。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>OpenSSL全称Open Secure Sockets Layer，是一个开源且强大的安全套接字层密码库。最初由Eric A.Young和Tim J.Hudson在1995年开发，后来由OpenSSL开发组持续更新并维护。OpenSSL是一个基于密码学的软件开发包，具备完整的加密算法和数据加密功能，是网络通信安全及数据完整性的一套安全协议，OpenSSL可以为数据在互联网的传播提供安全保障，使数据以加密安全的方式进行传输，防止核心保密数据被窃取或者监听。如果没有这个开源项目及开源社区的持续维护，那么我们在互联网上使用产品时安全性就无法满足，也就无法催生出如此丰富的互联网服务。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">2.3.3 数据库标杆：MySQL</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>我们每天使用的互联网产品服务产生大量的数据，金融交易平台使用MySQL作为数据库引擎，电商网站使用MySQL存储商品信息。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>MySQL是一个开源数据库管理系统，属于关系型数据库，最初的开发者是瑞典的MySQL AB公司，该公司在2008年被美国Sun公司收购，2009年，美国甲骨文（Oracle）公司收购Sun公司，MySQL成为甲骨文公司旗下产品。MySQL以开源的方式提供给互联网应用使用。MySQL的适用性非常广泛，为C、C++、Java、PHP等主流开发语言提供了使用接口，使基于任何技术语言开发的系统都可以使用MySQL作为数据库。我们每天使用的互联网会产生大量的数据，而这些数据最终都存储在数据库里。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>MySQL目前已经成为全世界范围内的主流数据库之一，并被运用在很多领域，MySQL的特点是开源、轻量化而且支持大规模访问，基本所有的互联网公司都在使用。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">2.3.4 服务器的“温床”:Apache</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>Apache为我们每天访问的网站提供最基础的容器支持，是一款服务器运行软件系统。容器是承载并运行服务端程序的环境，一台服务器可以通过多个服务端口对外提供服务。容器扮演的就是服务端程序运行环境的角色，与此同时，容器本身还提供其他辅助支撑系统。Apache HTTP Sever（简称Apache）是Apache软件基金会（Apache Software Foundation）维护的一个开放源代码的网页服务器项目。它可以运行在大多数计算机操作系统中，以其跨平台、快速、简单的特性被广泛使用，也是主流的Web服务端软件之一。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>Apache是一组服务，是我们日常使用的Web网站的容器，各种网站都运行在Apache提供的环境中，每当我们在浏览器中输入网址访问某一个网站时，服务端就很可能是一台使用了Apache的服务器，Apache为我们每天使用的互联网服务提供了基础运行环境。Apache软件基金会是专门为运作Apache开源项目提供支持的非营利性组织，他们还推出了一系列的开源软件平台，包括大数据处理的支撑技术Hadoop、服务端容器Tomcat等。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">2.3.5 工程师的造物利器：Eclipse</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>Eclipse是一个开放源代码的基于Java的可扩展开发平台，起始于1999年，最初由IBM牵头，现在已经形成了一个庞大的Eclipse联盟，有近150家公司参与到Eclipse项目的开发和维护中。Eclipse本身是一组开发服务框架的合集，简单地说，Eclipse是提供给软件开发人员进行软件开发的工具。很多使用Java语言的系统都使用Eclipse作为开发工具来开发，现在，Eclipse不仅仅是Java开发工具，还可以进行C、C++和PHP语言的软件开发。Eclipse已经逐渐形成了一个集大成的开发工具平台，作为软件开发人员的利器，大大提高了软件开发人员的工作效率，也让整个开发和集成过程变得更精简。Eclipse不像前文提到的OpenSSL会直接服务于互联网用户，Eclipse服务于构建互联网产品的软件开发人员，好比工匠手中的万能工具，能极大地发挥工匠实力，也能打造出极致好的产品。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">2.3.6 下个时代的技术主角：AR与VR</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>AR的中文全称是增强现实，是指通过虚拟图像建模，并利用物理设备采集图像信息的方式，能在现实世界中看到原本不存在的虚拟物体。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>VR的中文全称是虚拟现实，是通过计算机虚拟出来的一个全景视角，必须通过一个类似眼镜或头盔的VR设备来体验虚拟现实情境。VR的应用场景在游戏领域比较广泛，能让体验者置身于一个完全虚拟出来的全景世界，通过外部设备，在视觉和触觉上有全新体验。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>AR和VR的</span><span class="bold text-color-yellow">区别</span><span>在于，</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>前者是将真实世界和虚拟物体叠加在一起，通过取景介质体验和互动，是对现实的增强体验。VR是完全虚构出来的场景，与现实世界没有关联。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>VR是把人带入虚拟世界，AR是把虚拟物体带入真实世界。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">2.4 互联网产品技术架构</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">前端和服务端通过中间网络进行数据传输。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>前端就是用户使用的客户端，包括最初使用个人电脑通过浏览器进行网页浏览，现在通过智能手机使用App进行一系列的操作。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>服务端包括应用服务器和数据库，应用服务器用来部署服务端程序，处理前端请求并进行服务响应，数据库用来存储数据，服务器通过专门与数据库进行交互的程序对数据库进行读写操作。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">背后的实现模型基本都是请求和响应模式。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">2.5 移动互联网技术的特点</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">2.6 下一代互联网产品</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">人工智能是在现有互联网产品的基础上实现智能化，例如语音识别和处理、人机交流等。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>人工智能的应用能体现在人们生活的方方面面，例如出行、家庭机器人，这些场景更多的是通过人工智能技术将人与这个世界更真实地连接起来。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>过去的互联网产品更多的是人向计算机发出指令，计算机按照事先编写好的程序对输入的交互指令做出反馈，而人工智能能真正实现人与计算机的交流和互动，让这个过程更加拟人化。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">虚拟现实也是将会被广泛运用的新一代技术，尤其是在医疗和游戏领域，目前已经被广泛使用起来。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>例如医生通过虚拟现实的成像进行病例分析，甚至进行手术；游戏玩家通过虚拟现实头盔将自己置身仿如现实的游戏环境中。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>未来，这些技术将会被运用在越来越多的场景中，而那时的互联网才是一个真正万物互联的世界，互联网产品会真正成为人类生活生产中不可或缺的一部分，期待未来的到来。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">2.7 下一代互联网产品经理</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>未来，产品经理的能力模型不仅包括设计产品的能力，</span><span class="bold text-color-blue">也包括能基于产品定位把产品运营起来的能力</span><span>。运营能力的获取需要通晓综合门类知识，包括</span><span class="bold text-color-yellow">行业知识、市场、财务、法律</span><span>等。产品经理会从产品结构和功能设计者慢慢向全流程服务设计者转变。</span><span class="bold text-color-yellow">从产品定位、用户需求、技术方案、服务流程、市场推广等多个环节实现全流程打通，单一技能的产品经理时代即将过去，“全栈产品经理”的时代即将到来。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>另外，随着人工智能技术的发展，下一代产品经理所面对的产品形态会升级，产品与用户的交互方式会发生变化，从现在用户通过鼠标或者手指的操作升级为语音、行为，甚至是意识操作。这种技术升级带来的产品形态升级，也对产品经理提出了更高的要求，而“全栈产品经理”是下一代产品经理的基础能力模型框架。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">2.8 本章小结</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading1">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">3 产品经理学编程</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">3.1 产品经理为什么要学编程</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">3.2 主流编程语言介绍</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">3.3 编程语言中的数据类型</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">3.4 编程语言中的逻辑结构</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">3.5 数据的组织方式：数据结构</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">3.5.1 数组：同一数据类型的集合</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">数组是指具有相同数据类型的数据元素组成的集合。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>数组可以指定大小，而且数组里的元素可以通过数组下标标记和获取</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">在设计产品实现方案的时候，我们经常用到数组。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>例如，</span><span class="bold text-color-yellow">列表型</span><span>的产品设计，类似</span><span class="bold text-color-yellow">微信聊天列表</span><span>一类的设计，我们在实现时首先将需要展示的数据集中存放在数组里，然后在渲染界面时从数组中把数据元素取出来，然后展示到界面上。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">3.5.2 栈：汉诺塔结构</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>例如我们设计一个层级页面，从</span><span class="bold text-color-yellow">页面</span><span>A进入B再进入C，此时如果需要返回A的话，我们在界面上执行返回操作，首先会返回到B，继续返回则回退到A，这就是一种典型的栈的设计思路。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">3.5.3 队列：排队的艺术</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>队列的这种结构在程序中可以控制一些</span><span class="bold text-color-yellow">事务性的操作</span><span>，</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>例如一件事务包括几个步骤，而且这几个步骤有严格的</span><span class="bold text-color-blue">先后顺序</span><span>，</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>即必须先完成前面的步骤才能进行后面的步骤。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>当遇到这种情况时，我们就可以考虑使用队列。</span><span class="bold text-color-green">队列可以保证一个操作的原子性和顺序性，所以在处理一些事务性的操作时常用到队列结构。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">3.5.3 队列：排队的艺术</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">树状结构可以应用在产品结构设计、权限设计及用户等级设计等场景。树状结构也是程序设计中使用比较多的一种数据结构。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">案例分析</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>设计一个用户注册的功能，</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>用户注册分为两步，第一步是设置用户登录账户，主要由手机号和登录密码构成；</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>第二步是完善用户个人信息，例如姓名、性别、爱好等。用户注册功能在产品设计上通过两个界面显示，第一个界面进行手机号验证并设置登录密码，设置成功后进入第二个界面完善个人信息，个人信息中的爱好可以填写多个，完成个人信息设置后提交成功即完成注册，进入产品首页。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>在以上这个用户注册的产品功能中，我们使用了数据结构中的</span><span class="bold text-color-yellow">栈结构来实现界面的跳转</span><span>，从验证手机号和设置登录密码的界面进入完善个人信息的界面，从完善个人信息界面进入产品首页，这是一个典型的栈结构。另外，我们还使用了</span><span class="bold text-color-yellow">数组结构</span><span>，在完善个人信息步骤中的爱好填写一栏，我们可以填写多个爱好，爱好这一数据结构可以通过字符串数组表示，每一项爱好就是数组中的一项元素。如果产品首页是常规的</span><span class="bold text-color-green">底部四个模块切换的结构</span><span>，类似微信底部的四个模块，那么这种组合方式就是典型的</span><span class="bold text-color-yellow">树状结构</span><span>，根节点控制着四个子节点，每个子节点下还可以有很多子节点。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">3.6 什么是程序</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>程序是指按照一定的规则和顺序的任务执行过程，是一套指令集合，在软件开发中，程序由数据结构和算法组成。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">3.7 程序的最小执行单元</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>程序的最小执行单元我们称为函数或者方法，函数是完成一项具体任务的独立模块，</span><span class="bold text-color-blue">函数的组成包括输入、输出及函数内部的处理流程。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">3.8 程序与产品功能之间的关系</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>如果把一个产品功能看成一个整体，那么这个功能要分两部分支撑，</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">第一部分是用户能看到、能用到的业务逻辑和交互逻辑，例如我们使用的登录功能；</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">第二部分是实现业务逻辑和交互逻辑的程序，整个程序由多个程序片段相互组合起来，不同的程序片段完成不同的工作，组合到一起相互协作就成了一个完整的产品功能。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">3.9 本章小结</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading1">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">4 产品经理学数据库</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">4.1 产品经理为什么要学数据库</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">4.2 关系型数据库</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">4.3 非关系型数据库</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>在设计某一个产品功能时，工程师通常会提出跟数据库相关的问题，例如提出一个新功能时，工程师会说这个功能影响到了现在数据库的设计，</span><span class="bold text-color-blue">这个功能里有些字段是目前数据库里没有的，或者这个功能导致了数据库结构的变化。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>当遇到这些问题时，产品经理需要知道所有的功能最终都是将数据通过产品功能表现出来，尤其是对已有功能进行修改时，需要处理两个问题，</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">第一个问题是新的设计应该对数据库做何种调整，是需要新增数据库字段还是修改或删除原有字段；</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">第二个问题是新的设计对原有数据的兼容性问题，兼容性问题往往是产品设计中带来最主要影响的问题之一。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">为了适应新的产品功能，在数据兼容性上需要做充分考虑，否则就可能出现新功能好用，但在老版本的产品上会出现异常。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>每一个数据在数据库里都对应一个数据库表字段，每一个字段都有自己的名字，工程师在讨论问题时，经常会根据字段的名字来说明问题，例如这个字段是代表哪个信息，在客户端和服务端进行数据传递时，对应字段的值是什么。当工程师说数据库字段值时，产品经理需要知道这个字段是代表哪个产品功能中的哪一个具体信息。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">4.4 数据存储与恢复</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">4.5 从数据角度看产品设计</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">4.6 本章小结</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading1">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">5 产品经理学客户端技术</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">5.1 产品经理为什么要学客户端技术</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>产品经理在了解这些技术控件后，</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">一方面能对客户端系统控件有全面的了解，在设计产品时知道选用哪些系统控件构成产品功能界面；</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">另一方面，能提高设计效率并降低工程师的开发难度。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>5.1.1 常用客户端技术介绍</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>客户端通常是指个人电脑、智能手机和平板电脑，以及逐渐普及的智能手表。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>5.1.2 Android系统</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>5.1.3 iOS系统</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>5.1.4 Web网页</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">5.2 Android基础技术及基本控件</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">Android应用使用Java作为开发语言，使用前文提到的Eclipse作为开发工具。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>5.2.1 View</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>5.2.2 Button</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>5.2.3 TextView</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>5.2.4 EditText</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>5.2.5 ImageView</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>5.2.6 ListView</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>5.2.7 GridView</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">5.3 Android界面布局原理</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">5.4 Android系统的权限控制</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">5.5 Android应用打包及发布</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>Android应用开发完成后，需要被打包成一个扩展名为“apk”的文件，</span><span class="bold text-color-blue">AndroidPackage</span><span>，这个文件是一个完整的Android应用安装文件，类似于我们在Windows系统中使用的“.exe”的安装文件。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>打包安装文件时，我们需要使用一个特殊的签名文件为这个安装包文件签名，签名的</span><span class="bold text-color-blue">目的是保证这个应用安装包的唯一性和安全性。</span><span>因为最终我们需要将安装文件发布到各种应用市场，而市场里有各式各样的应用产品，做唯一性区分并保证安装包的唯一性，就是通过签名文件来完成的。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">5.6 Android多屏幕适配</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">5.7 iOS基础技术及基本控件</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>5.7.1 UIView</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>5.7.2 UIButton</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>5.7.3 UILabel</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>5.7.4 UITextField</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>5.7.5 UIImageView</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>5.7.6 UITableView</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>5.7.7 UICollectionView</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">5.8 iOS界面布局原理</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">5.9 iOS系统权限控制</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">5.10 iOS应用打包及发布</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>另外，苹果的开发者证书分为三种，</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>一种是</span><span class="bold text-color-blue">个人开发者</span><span>，也就是在App Store上开发商署名为个人的开发者。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>第二种是</span><span class="bold text-color-blue">公司开发者</span><span>，这种开发者是在App Store上开发商署名为公司的开发者，申请公司开发者需要提供公司的相关证明材料。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>第三种开发者类型是</span><span class="bold text-color-blue">企业开发者</span><span>，企业开发者可以自行打包并发布应用。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>案例分析</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">5.11 Web基础技术知识</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">5.11.1 网页的骨骼和外衣：HTML/CSS</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">HTML（HyperText Markup Language）全称超文本标记语言。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">CSS（Cascading Style Sheets）全称层叠样式表，是一种将网页内容与网页样式分离的技术。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">5.11.2 URL/HTTP</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>URL（Uniform Resource Locator）的全称是统一资源定位符，互联网上所有的资源都有一个唯一的URL地址，资源的类型可以是一个网页、一张图片、一首歌曲或者一段视频。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>URL通常分为三部分，</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>第一部分是</span><span class="bold text-color-blue">协议</span><span>，也就是上例中的“http://”,</span><span class="bold">HTTP协议（Hypertext Transfer Protocol）全称超文本传输协议，是互联网的基本协议。</span><span>字面意思是通过该协议我们可以在互联网上传递除文字以外的其他内容，例如网页、音乐、图片等。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>第二部分是资源所在的</span><span class="bold text-color-blue">服务器IP地址</span><span>，为了方便识别，IP地址通常被替换成</span><span class="bold text-color-blue">域名</span><span>。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>第三部分是资源的</span><span class="bold text-color-blue">具体路径</span><span>，也就是域名后斜杠的部分，这部分内容和文件夹的层级结构类似，不同的结构间通过斜杠进行区分。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">HTTP还有一个安全版本HTTPS（Hyper Text Transfer Protocol over Secure Socket Layer），</span><span>当我们在浏览器中使用网银或者跟支付相关的服务时，浏览器的地址协议通常是“https://”开头的</span><span class="bold text-color-yellow">，HTTPS是基于加密协议的传输协议，</span><span>其加密方式就是我们在第2章提过的OpenSSL组织研发的</span><span class="bold text-color-yellow">SSL加密方式</span><span>。URL和HTTP为互联网里所有的资源定义了唯一地址并制定了传输协议标准，使得互联网服务能以统一的标准运转。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">5.11.3 Web App和Native App</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>移动App的实现有两种形态，</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>一种是通过</span><span class="bold text-color-yellow">Web的方式实现</span><span>，也就是在App内部通过加载Web网页的方式实现产品功能；</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>另一种是</span><span class="bold text-color-yellow">Native或者叫原生的方式实现</span><span>，这种方式是使用移动平台原生的控件开发而成。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">对于一些用户使用频率高而且对体验要求高的产品模块，使用Native方式实现能保证用户体验，</span><span>对于一些使用频率不那么高，</span><span class="bold text-color-yellow">而且内容变化比较频繁的产品模块，选用Web实现可以保证灵活度，</span><span class=" text-color-green">因为修改Web的内容只需要在服务端进行网页修改就行，不需要重新更新发布App，</span><span>但是如果要修改Native的功能就得重新更新发布App，更新成本较高。</span><span class=" text-color-green">还有之前提到的开发成本，开发Web App只需要Web开发人员就能完成，而且对适配的要求不像Native App要求得那么高。</span><span>另外，可以实现跨平台运用。随着技术的发展，未来Web技术会成为主流，原本的劣势可以通过技术发展得到弥补。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">5.11.4 Cookie和Session</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">Cookie和Session。</span><span>会话存储技术</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>第一个是当我们登录一些网站要输入用户名和密码时，通常都有一个记住用户名和密码的功能，这样下次登录时就可以不重复输入。</span><span class="bold text-color-green">Cookie是将信息存储在本地</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-green">Cookie在客户端对应的存储方式通常是文件</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>第二个场景是当我们使用电商类网站购物时，把商品加入购物车后，下次进入购物车或者从其他客户端进入购物车仍然能看到之前加入购物车的商品。</span><span class="bold text-color-green">Session是将信息存储在服务器端</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-green">Session是一种存储在服务端的信息，存储的方式可以是文件也可以是数据库。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">5.11.5 Hybrid App</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">Hybrid App是一种混合开发技术，所谓混合开发就是指在一个产品中同时使用Native技术和Web技术。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">5.12 如何判断产品问题是否出自客户端</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">首先，根据客户端出问题时提示的异常信息判断。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>不同的信息能给工程师不同的判断依据，例如，提示</span><span class="bold text-color-green">网络异常和提示数据加载失败</span><span>是两个完全不同的信号，网络异常有可能是用户当前设备所处的网络环境不佳，这种情况不是产品本身的问题，而是外部网络条件的问题，所以这种情况下工程师也做不了什么。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>如果是</span><span class="bold text-color-green">数据加载失败</span><span>，有可能是客户端在向服务端发送请求时，数据返回有误或者数据显示有误，问题可能出自服务端，也可能是服务端修改了数据字段导致客户端解析失败。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>此时，如果</span><span class="bold text-color-green">定位不到具体问</span><span class="bold text-color-green">题</span><span>，需要与客户端工程师、服务端工程师共同联调定位问题。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">其次，对于产品表现出来的问题或BUG，产品经理不要急于下结论定位问题出在客户端还是服务端，基于前文提到的一些客户端技术，可以做一些基本判断。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>例如，列表中显示的数据有</span><span class="bold text-color-green">重复项</span><span>，而且每次都能复现，这极有可能是服务端返回数据时返回了两个一样的，同时也有可能是客户端在解析数据加载显示时的问题，把一个数据展示了两次。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>产品经理在遇到这个问题时，可以先从一方下手，即先向服务端工程师确定返回的数据是否正确，如果确定无误，那问题肯定就出现在客户端解析和展示数据的环节，直接与客户端工程师沟通并解决问题即可。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">5.13 本章小结</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading1">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">6 产品经理学服务端技术</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">6.1 产品经理为什么要学服务端技术</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>常用服务端技术介绍</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>常用到Java语言的开发平台Java EE（Java Enterprise Edition）。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>PHP是一种脚本语言，可以用于网页开发。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>PHP有很多现成的框架可以使用，通过框架可以非常简单地实现很多功能。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>现在使用比较多的Node.js也是一种服务端开发技术，使用JavaScript语言进行开发，Node.js能实现从网页前端到后端服务的全流程覆盖，是一种灵活性和扩展性都比较好的服务端技术。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>还有以Python语言为主的服务端技术和以C#语言为主的</span><a class="content-link" target="_blank" spellcheck="false" rel="noreferrer" href="http://asp.net/"><span class="content-link-text">ASP.NET</span></a><span>等多种服务端技术</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>如果是一些</span><span class="bold text-color-green">轻量级产品或系统</span><span>，要求快速迭代和快速发布，可以选择例如PHP或者Node.js这样的服务端技术，这些技术选型的特点是轻量化，不需要特别编译打包，由于是由脚本语言编写，可以直接运行发布，所以对于一些网站类产品或者做业务逻辑处理的产品服务端，选用这种技术类型是比较合适的。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">6.2 服务端的基本架构</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>首先是从互联网接入，互联网的另一头实际上就是客户端，</span><span class="bold text-color-yellow">客户端通过互联网请求访问服务器</span><span>，请求进来后首先经过负载均衡服务器，负载均衡好比是一个交通指挥调度中心，在车流量比较大的时候，它负责指导和梳理交通，将车流量比较大的路口的车辆分流到车流量较小的路口，实现流量的动态平衡。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">负载均衡服务器是用来处理大规模请求的服务器</span><span>，通常对于一些访问量比较高的系统来说，负载均衡就显得尤为重要，</span><span class="bold text-color-yellow">负载均衡服务器的作用是将同时进来的大量访问请求根据应用服务器的忙碌程度进行动态调度，可以把负载均衡服务器理解成服务端的调度中心，它负责流量的动态分配，根据对应的应用服务器的负载情况，动态分配请求到不同的应用服务器。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>一个客户端请求经过负载均衡服务器的动态调度后，会被分配到某一台</span><span class="bold text-color-yellow">API（Application Programming Interface）服务器，通常也叫作应用服务器</span><span>。API服务器主要根据不同的客户端请求进行相应的</span><span class="bold text-color-green">业务逻辑处理，并将处理完成的结果返回给客户端。</span><span>同样的应用服务器通常会有多台同时运行，客户端访问量足够大时，一台服务器忙不过来，所以采用多台同时运行来</span><span class="bold text-color-green">分流处理客户端请求，而分流调度就是通过负载均衡完成的。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">数据库服务器负责运行后端数据库</span><span>，例如用户通过客户端访问某一个商品信息时，应用服务器会根据用户请求从数据库中查询商品信息并返回给客户端。数据库服务器负责运行系统数据库。一般情况下，会有多台数据库服务器同时运行，因为数据都是核心资产，为了保证系统数据的安全性，在多台数据库服务器上会存储同一份数据。当某台数据库服务器发生异常时，其他的还可以作为备用使用。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">6.3 数据接口及结构</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>数据接口是指客户端与服务端进行数据传输和交互的数据协议，数据接口是一种数据交换的标准。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>数据接口的构成通常是“key-value”的形式</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">6.3.1 JSON</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">JSON（JavaScript Object Notation）是一种轻量级的数据交换格式，也是一种用来表示数据接口结构的形式。</span><span>JSON结构灵活性高，可以进行丰富的数据结构表达，JSON结构易于理解和阅读，也便于计算机进行解析和表达</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">6.3.2 XML</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">XML（Extensible Markup Language）的全称是可扩展标记语言，与JSON一样，XML也是一种数据交换格式，也可以用来进行简单的结构化文本数据的存储。</span><span class=" text-color-green">XML的结构可以进行自定义，XML的基本元素是由一个个标签构成的，每一个标签都由标签头和标签尾构成，内容放在标签头尾之间，例如“&lt;name&gt;ryan&lt;/name&gt;”就是一个完整的标签体，尖括号内是标签的名字，标签尾用“/”加在标签名之前表示。</span><span>另外，与JSON类似，XML的标签元素也可以进行相互嵌套，标签内的值也可以是标签体，下面我们来看用XML结构表示的省份和城市的例子。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">XML的结构体积比JSON大，而且阅读结构不如JSON清晰。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>所以，在</span><span class="bold text-color-green">生产开发中</span><span>，使用JSON作为数据接口进行数据传输和交换的要多一些。X</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>ML的应用领域非常广泛，例如，在Android开发中，</span><span class="bold text-color-green">界面布局文件</span><span>就是通过XML结构实现的，很多服务器配置文件也都是通过XML结构实现的，在有些系统实现中，也通过XML表示数据接口进行数据传输，但主流是使用JSON结构。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>案例分析</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>产品经理完成产品设计稿提交到产品评审会进行评审的过程中，参与评审的大部分都是工程师，除了对产品逻辑和设计本身进行评审外，主要是基于产品设计稿进行技术方案的评估。对工程师来说，看到产品功能设计的同时，思考的是功能背后的实现模型。对登录功能而言，产品经理设计时会标注登录的几种状态，成功后该如何处理、失败后该如何处理、对登录结果的处理后续流程是什么等。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>工程师除了思考这些，还要考虑登录的接口应该包含哪些信息，这些信息是否足够，是否需要再添加其他信息。例如，用户的个人信息应该在登录时一并返回，那登录的接口里就需要包含这些信息，虽然在功能里体现不了，但实际上后台流程需要对这些信息进行处理。这也就是技术之外的视角看不到的内容，当产品经理衡量一个功能的工作量时，不能只看功能本身，应该从了解技术的角度去判断和这个功能相关的衍生流程。在与工程师沟通的过程中，基于这种完整的信息去沟通也会降低沟通成本。了解服务端能帮助产品经理从更宏观的角度了解和设计产品，提高对产品实现细节的把控。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">6.4 服务端与客户端的交互模型</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">请求响应（Request-Response）模型</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>这是互联网技术产品实现信息交互的一种数据交换模型，通过这个模型主要</span><span class="bold text-color-yellow">完成信息的发送、处理和响应</span><span>。这个模型主要由三部分构成，</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">分别是客户端、服务端和中间的互联网。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>在这个模型中，还包括了数据的流动。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>数据通过数据接口进行传输，首先由客户端发起功能请求，例如进行登录操作时，客户端通过数据接口传递用户名和密码数据，数据通过网络传递给服务器，服务器获取到请求后进行数据的解析和处理，然后将处理结果以请求响应的方式返回给客户端。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>服务端也会通过数据接口返回给客户端一个数据格式，最后一步就是客户端获取到服务端的请求响应，同样进行数据解析和处理后，再将结果通知用户。不管是网站还是App，基本上涉及客户端与服务端的交互都是基于这种请求响应模型，简单说就是一问一答，客户端问服务端，服务端接收后进行处理，并将处理结果回答给客户端。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">6.5 服务器部署及运维</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>把我们开发完成的系统部署到</span><span class="bold text-color-blue">公网服务器</span><span>上，公网就是公开网络，我们平时能使用到的产品服务都部署在公网上。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>租用云服务提供商的机房，然后将我们的服务端部署在云端，这样我们只需要按使用情况支付给云服务商一定的费用就可以正常使用了。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>服务器部署完毕后，接下来就是长期的维护和调优过程，这个过程叫作</span><span class="bold text-color-blue">运维</span><span>，服务器运维工程师就是专门负责这一过程的。</span><span class="bold text-color-yellow">服务器运维包括发布新的服务，对服务器进行更新、维护，同时对服务器进行整体监控，出现紧急情况需要及时处理。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>例如，突然遇到用户访问高峰期时，服务器处理能力不足，就需要运维人员及时扩大服务器带宽或者增加服务器数量来支撑高访问量。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>服务器的运行要求通常是24小时无间断的全天候运转，如果涉及服务器因为物理损坏需要更换，通常需要有备份或者用临时服务器进行应急处理。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>如果因为系统维护或升级导致宕机，也需要有一整套完善的恢复机制。所以，服务器运维是一个非常谨慎和重要的环节。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>产品开发完成后，测试也通过了，产品经理就会申请将产品上线，这时产品经理需要做的事情就是确保客户端代码已经更新到最新状态并且已经打包就绪，</span><span class="bold text-color-green">同时确保服务端代码已经更新到最新状态并且已经处于可部署状态。</span><span>因为之前的开发和测试都是在测试服务器上，所以需要将测试服务器上的新功能或者修改迁移到公网服务器上，最后一个环节就是通知运维人员进行服务器更新部署，将最新的服务端上线到公网服务器上。这些操作都完成后，就可以试验新上线的产品是否运转正常了，此后的实践都出于不断测试和服务器运维的过程。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">6.6 云服务器</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>既能降低产品开发方的整体成本，也提高了服务器的管理和运维效率。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">6.7 如何判断产品问题是否出自服务端</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>服务端的作用我们之前介绍过，</span><span class="bold text-color-yellow">它是用来接收客户端请求并将处理结果返回给客户端的一个中间调度者</span><span>。服务端不仅与客户端进行交互和通信，同时还与数据库进行交互。例如，当用户在产品上进行一次操作时，如果客户端报错提示“服务器异常”，那么问题肯定出在服务端，</span><span class="bold text-color-yellow">有可能是当时服务器响应有延迟或者在客户端请求过程中因为异常原因中断了请求过程。</span><span>当产品经理发现类似的问题时，可以根据客户端的报错提示内容对问题进行判断。如果报错提示内容是服务器异常或者数据异常等错误，基本可以确定问题出自服务端。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>还有一种情况，当客户端</span><span class="bold text-color-yellow">上显示不出数据时</span><span>，问题也有可能出自服务端，具体原因可能是服务端在查询数据库时没有查询到信息，客户端通过网络请求获取数据时，接收到的数据集为空，所以在客户端产品中没有展示出数据。类似的情况还有很多，作为没有技术背景的产品经理，当遇到此类问题时，通过信息提示分析问题有助于快速定位和解决产品出现的问题。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">6.8 本章小结</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading1">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">7 产品经理学数据</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">7.1 什么是数据</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">7.2 数据分类及数据分析</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">7.2.1 结构化数据</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>结构化数据是</span><span class="bold text-color-yellow">按照一定的数据规则存储的数据</span><span>。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">7.2.2 非结构化数据</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">非结构化数据大多数都是一些零散的、没有一定规律的数据。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">7.3 p数据指标</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>数据指标是指产品在各个方面所记录和统计出来的数据结果，</span><span class="bold text-color-yellow">是对过去进行回顾和对未来进行预测的参考标准。</span><span>一个公司的业绩或者产品的健康程度也可以通过数据指标反映。常见的数据指标例如</span><span class="bold text-color-yellow">活跃用户数、周活跃用户数</span><span>或者</span><span class="bold text-color-yellow">月活跃用户数</span><span>可以反映出在一个时间周期内用户对产品的使用情况，活跃度越高说明产品被用户使用得越多。</span><span class="bold text-color-yellow">转化率</span><span>指标是反映一种产品功能的实际效果的数据指标，例如设计并开发了一种产品功能，通过一些指标的监测，可以反映出这项功能在提高产品用户活跃度或者促进业务发展时是否真正起到了作用</span></div>
+    
+    
+    
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">7.3.1 UV/PV</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">UV（Unique Visitor）是网站独立访客和独立用户的意思</span><span>，指访问某个网站的</span><span class="bold text-color-purple">独立IP的数量</span><span>，通常计算的周期是当天的0点到24点。</span><span class=" text-color-green">UV可以反映出用户活跃度，也可以反映出在某一个固定周期内用户使用产品的情况。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">PV（Page View）通常是指网站的页面访问量，和UV不同的是，PV统计的是用户打开网站的次数。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-green">PV指标能反映产品中某个页面的访问频率</span><span>，一般首页的PV数是最高的，因为用户进入产品页面后首先看到的就是首页，接着用户会根据自己的喜好和选择进入二级页面，再进入三级甚至四级页面，那么通过每个页面的PV数，我们可以统计出</span><span class="bold text-color-purple">转化率</span><span>，</span><span class=" text-color-red">统计用户以哪种使用路径访问时的PV指标是最高的，通过数据统计并反映出用户使用产品的主路径，在优化产品时可以围绕这个主路径进行优先优化。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">7.3.2 DAU/MAU</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">DAU（Daily Active User）是指日活跃用户，记录一天内独立用户登录或使用产品的次数。</span><span>日活跃用户数通常可以反映网站或者App在一天内的用户活跃情况，DAU越高说明产品的活跃用户越多，使用产品的人也就越多。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">MAU（Monthly Active User）是指月活跃用户，记录在一个自然月内用户的活跃度。</span><span>MAU与DAU相比是一个更宏观的指标，DAU是偏向于微观的指标。通过对日活跃用户和月活跃用户数据指标的统计和观察，可以反映出网站或者App的整体运营情况，对于运营策略的制定和调整有直接的数据指导作用</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">7.3.3 GMV</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">GMV（Gross Merchandise Volume）全称为商品交易总额，是一种反映平台交易总量的数据指标。</span><span>发生的商品交易总额，例如用户在淘宝上下订单了</span><span class=" text-color-green">但是还没有支付</span><span>，那么这个商品的交易额度也会被计算进入GMV，下单后用户可以通过支付宝付款，也可以通过银联或其他方式支付。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">7.3.4 转化率/留存率</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">转化率是统计一个大范围的运营活动或者产品动作转化出有效用户的比例。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-green">转化率越高说明活动的效果越好，投入产出比越高。</span><span>通过产品引导性的设计和展示也可以提高转化率，尤其是在电商类的产品中，通过设计用户购物路径，</span><span class="bold">引导用户进入某一类商品中去查看，就能提高用户购买该商品的转化率。</span><span class="bold text-color-red">转化率通常衡量的是投入产出比，低投入、高转化是所有产品和运营追求的目标。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">留存率是指用户进入产品后，在一定的周期过后留存在产品中的用户比例。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>例如以某一天开始计算，当天进入产品的新用户是100人，一天后这一批人里有50个人继续使用产品，那这一天产品的留存率就是50%，依此类推。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-red">留存率能体现产品在用户心目中的可用性，像微信就是一个活跃度和留存率都非常高的产品，因为用户每天都通过微信沟通进行社交，所以这款产品对用户的可用性很高，用户留存率自然就高。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">7.4 数据仓库</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">数据仓库（Data Warehouse）可简写为DW，是一种对历史数据进行存储和分析的数据系统，通常是为企业根据过往数据进行分析从而制定相关决策而存在的。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>数据库是</span><span class="bold text-color-green">对实时数据进行存储和事务性处理的系统</span><span>，对应的操作包括了新增数据或是对数据进行修改和查询，但是在</span><span class="bold text-color-green">数据仓库中通常只对数据进行查询操作。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>简单地说，数据库是为捕获数据而设计的，数据仓库是为</span><span class="bold text-color-green">分析数据</span><span>而设计的。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">7.5 数据可视化</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">数据可视化是对数据分析结果的展示，通过数据可视化能给决策者提供更直观生动的数据决策支持。</span><span>数据可视化的技术没有什么创新，实际上就是使用现有的网页技术对数据进行可视化呈现，呈现的方式可以根据需要进行非常多样化的选择，例如曲线图、饼图、柱状图等，除静态的展示方式外，还可以对数据进行动态化展示，图7-7所示为某App的Android客户端设备分辨率分布柱状图。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">7.6 数据驱动下的产品与业务</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">在移动互联网时代，移动终端成为主要客户端产品，可以统计用户的活跃地区、手机型号、网络条件等，可以基于这些数据统计指标进一步调整产品开发和业务运营策略。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>例如，根据活跃地区的排名可以重点对该地区加强业务运营，提高产品业务转化率；</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>对于手机型号数据，可以加强对高频率机型的测试，降低产品故障率。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>类似的数据指标还有很多，通过这些数据指标驱动产品和业务的优化，是一种指向性更精准、投入产出比更高的做法。在大数据时代，数据是真正有价值的资产，掌握了数据就掌握了未来，数据所能产生的价值远远超出我们的预期，对现在的很多产品和公司来说，掌握数据入口并拥有采集数据的能力就拥有话语权，真正利用数据驱动产品和业务也能在未来产生极大的商业价值。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>案例分析</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>在产品设计完成并开发上线后，进入产品运营阶段，运营是通过人工干预来提升产品的各项数据指标，</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>首先需要完成的是定义数据指标，比如产品的日活跃用户。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>另外，如果想统计产品的第二天留存率，则可以计算产品次日留存率。针对一些产品转化事件，可以设置漏斗模型，</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>例如，假设我们要统计两个不同的产品功能入口最终转化的用户下单成交的概率，就可以分别针对两个产品入口进行路径统计，看通过哪个入口最终完成的用户成交率高，通过结果分析就可以重点优化转化率高的路径。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>另外，从最优路径里还可以统计各个环节的向下转化率。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">7.7 本章小结</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading1">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">8 产品经理如何写一份高质量的PRD</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">8.1 PRD的基本结构</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">PRD（Product Requirement Document，产品需求文档）由产品经理负责撰写。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">产品需求文档是产品经理用来与技术人员或其他相关人员进行信息传递和沟通的工具。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>PRD的结构和格式没有绝对的标准，往往不同的公司和团队会根据自己的情况对PRD的结构和格式进行定义。大体来说，一份完整的PRD至少应该包括三部分，分别是</span><span class="bold text-color-yellow">变更日志、需求描述和功能设计。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">8.1.1 变更日志</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>图8-1 PRD变更日志</span></div>
+    <ul class="image-list">
+    <li class="image-item">
+    <img
+      src="https://api2.mubu.com/v3/document_image/81f60b14-3983-4c19-827e-c4bfbe7df144-1253121.jpg"
+      style="width: 400px;"
+      crossorigin="anonymous"
+      class="image"
+    />
+  </li>
+  </ul>
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">记录PRD的变更情况，有了PRD变更日志就可以很方便地为具体的产品需求变更情况做索引，既能回溯版本，也可以通过关键点的记录辅助沟通。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">8.1.2 需求描述</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">需求描述是用来介绍产品功能所满足的业务需求和用户需求的，如</span><span class="bold text-color-blue">果产品经理在设计产品时不知道产品功能满足了什么需求，那么这个功能就很有可能成为一个无用功能。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>业务需求是指该产品功能在业务开展中所扮演的角色，例如“关注”这个功能，在有些产品上这个功能也叫“收藏”，这个功能满足的业务需求一般是获取用户对某个人或者某件东西的兴趣数据，通过收集这种兴趣数据，可以给业务发展提供指导。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">8.1.3 功能设计</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>产品功能设计是PRD里重要的组成部分，PRD的主要目的是</span><span class="bold text-color-blue">沉淀记录每一个产品功能的设计思路和产品规则。</span><span>产品功能设计包括产品</span><span class="bold text-color-yellow">业务流程、功能信息结构、产品原型及交互逻辑、产品视觉设计，除产品视觉设计是由专门的视觉设计师完成以外，其余的部分都是由产品经理完成的。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>产品经理在写作PRD的过程中，在产品功能设计阶段做到足够细致就可以减少工程师在理解和沟通过程中出现的问题。</span><span class="bold text-color-blue">一份详细的PRD本质上是一份详细的实施说明文档，产品经理将产品的设计思路通过PRD呈现出来，工程师根据这份说明文档进行技术实施，老板基于这份文档理解产品的设计思路，后续对产品进行升级优化也要以前期的PRD为参考进行优化。</span><span>可以说，PRD是整个产品工作中必不可少也是非常重要的组成部分。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>预约医生产品原型图</span></div>
+    <ul class="image-list">
+    <li class="image-item">
+    <img
+      src="https://api2.mubu.com/v3/document_image/b9ad1e25-d27b-4d88-af0e-b0541b1607a5-1253121.jpg"
+      style="width: 400px;"
+      crossorigin="anonymous"
+      class="image"
+    />
+  </li>
+  </ul>
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">8.2 产品经理如何评判一个需求的价值</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>需求的三个维度</span></div>
+    <ul class="image-list">
+    <li class="image-item">
+    <img
+      src="https://api2.mubu.com/v3/document_image/c011f479-d104-4729-a226-cc7d292598b6-1253121.jpg"
+      style="width: 400px;"
+      crossorigin="anonymous"
+      class="image"
+    />
+  </li>
+  </ul>
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>以上三个维度分别衡量的是</span><span class="bold text-color-blue">需求来自何处、需求解决的问题（目的），以及需求本身的价值</span><span>。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">1）需求来自用户还是“用户”</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">2）需求满足少数人还是多数人</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">3）需求对产品战略的落实是否有促进作用</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">8.3 基于目标读者写作</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>首先，去掉邮箱填写后在新注册的用户信息里就没有填写邮箱这一项了，这是正常的逻辑和流程。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>其次，如何兼容老版本的用户，这是工程师考虑的问题，因为在数据结构的设计上，为了兼容新老版本，邮箱这个数据字段是肯定会保留的，所以产品经理需要在PRD里标注对老版本而言，处理方法是什么。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>另外，还有一种特殊情况，新注册的用户在注册时是没有地方填写邮箱的，如果新注册的用户用老版本登录使用产品，那么在用户信息中邮箱该如何显示，这也是需要考虑的。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>基于上述例子，产品经理需要在PRD里写明这几个关键信息点，这样工程师在阅读时就会一目了然。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">8.4 PRD里的产品逻辑</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>之所以叫PRD，就是因为它更多的是描述产品相关的内容，PRD的目的就是</span><span class="bold text-color-blue">把产品需求描述清楚并以此作为工程实施的依据。</span><span>在PRD里有一块很重要的内容就</span><span class="bold text-color-blue">是产品逻辑</span><span>，产品逻辑</span><span class="bold text-color-yellow">主要指功能模块内部及功能模块之间的相关逻辑，模块划分越清晰的产品，之间交错的逻辑就越少。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">功能逻辑通</span><span>常是指产品功能的内部逻辑，</span><span class="bold">例如产品的登录功能包含检查用户账号是否存在、密码是否正确等逻辑。</span><span>登录后的一些隐含逻辑最好也在PRD里指明，有的产品在登录后需要读取用户信息，或者获取用户当前位置等，这些都需要在PRD里标注清楚，工程师拿到一个逻辑完整的PRD去实施才不会出现遗漏。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">产品交互逻辑</span><span>一般是产品经理在原型设计阶段就需要完成的工作。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>产品逻辑里的</span><span class="bold text-color-blue">边界规则</span><span>，边界规则一般是指产品中的一些</span><span class="bold text-color-yellow">临界状态</span><span>，例如微信</span><span class="bold text-color-yellow">联系人的上限</span><span>是5000人，发布一个带图片的朋友圈的图片</span><span class="bold text-color-yellow">上限</span><span>是9张，在微博中发布一条文字微博的</span><span class="bold text-color-green">字数上限是140个字</span><span>，这些边界规则是在产品实施过程中尤其要注意的。</span><span class=" text-color-green">同时还有一些隐性边界规则也是产品经理在写作PRD的过程中需要注意的，例如在用户注册时设置登录密码，</span><span class="bold text-color-green">密码的规则是最少6位、允许特殊符号的设置</span><span class=" text-color-green">等，这些隐性规则会直接决定产品最后的可用性。工程师在实施过程中也需要基于这些规则通过代码一个个去实现，如果没在PRD里特别标注，很可能一些关键规则就遗漏了。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">8.5 PRD里的技术规则</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">8.6 常用的PRD写作工具介绍</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>例如，产品经理常用的</span><span class="bold text-color-yellow">Axure和Sketch</span><span>，使用这两种工具能非常快速且直观地制作产品原型和交互图，同时也可以在原型上标注产品功能逻辑和交互逻辑。另外，还有通过思维导图来沉淀PRD信息的，例如Xmind就是一个非常不错的思维导图工具。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>现在还有一些在线协作文档也可以被用来写作PRD，例如</span><span class="bold text-color-yellow">“石墨文档”</span><span>就是一种比较好的在线协作文档，当多位产品经理配合写PRD时，用在线写作文档会非常方便。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">8.7 功能型PRD与技术型PRD的区别</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">功能型PRD</span><span>或者叫传统型PRD的目的是将产品设计详尽地文档化，</span><span class="bold text-color-yellow">包括需求分析与产品功能的具体设计。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>目的在于通过需求文档</span><span class=" text-color-green">进行下一环节的沟通与工作交接</span><span>，</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">技术型PRD</span><span>会在其中添加</span><span class="bold">技术术语的部分</span><span>，</span><span class="bold text-color-yellow">目的在于帮助工程师理解产品经理的设计意图，提高执行效率的同时降低沟通成本。</span><span>对非技术背景的产品经理来说，在实际工作中会碰到一些技术名词，每次遇到不懂的名词一定寻根问底弄明白，这种信息获取得越多，对技术的理解就会越深入，不管是对写PRD还是对与工程师沟通的过程都会有极大的帮助作用。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">8.8 沟通胜过文档</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">产品经理是一个复合职能，需要学习和了解的知识有很多，既要懂业务，也要懂设计和产品，一个产品想法从出现到落地，中间需要经历很多过程。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>首先需要从业务的角度说明这个产品想法能带来的业务价值，业务价值能转化成的</span><span class="bold text-color-yellow">用户价值或者商业价值</span><span>是什么。这个过程就需要产品经理以一个懂产品的业务人员的姿态表达自己的观点，争取公司高层和业务方的认可，取得业务层面的共识。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>接下来需要将具备业务价值的产品想法转化为产品设计思路。这时，产品经理需要将自己的角色转换为产品和设计角色，在与其他产品经理和设计师沟通自己的产品想法时，</span><span class="bold text-color-yellow">站在产品经理的角度阐述为用户带来的价值，以及这个产品想法能为现在的产品提升什么。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>这个过程中可能会有很多讨论，这时产品经理需要将对业务和商业的理解与对产品和用户的理解结合起来，通过这种结合点与其他产品经理和设计师沟通，然后将沟通结果沉淀为一个</span><span class="bold text-color-yellow">产品方案</span><span>。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>最后才是和工程师的沟通，在和工程师的沟通中既要说明</span><span class="bold text-color-yellow">产品的合理性</span><span>，也要说明完整的</span><span class="bold text-color-yellow">逻辑结构</span><span>，这部分内容主要就是前文提及的</span><span class="bold text-color-yellow">产品逻辑</span><span>。可见，产品经理的工作主要是提出产品方案，然后不断地沟通达成共识的过程，这个过程中产品经理需要了</span><span class="bold text-color-green">解业务、产品设计和工程技术，最终将沟通的结果转化为PRD交付实施。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">8.9 本章小结</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading1">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">9 如何与工程师正确沟通</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">9.1 工程师是一个什么样的群体</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>图9-1 工程师思维图谱</span></div>
+    <ul class="image-list">
+    <li class="image-item">
+    <img
+      src="https://api2.mubu.com/v3/document_image/7dce0847-7a70-4f49-a79c-dfc83a19f7ae-1253121.jpg"
+      style="width: 400px;"
+      crossorigin="anonymous"
+      class="image"
+    />
+  </li>
+  </ul>
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>从这个图谱可以看出，工程师的思维及性格的核心是“理性”，与设计师或者从事艺术文化相关工作的感性思维不一样，理性的外围主要体现在严谨、挑剔、逻辑性强、固执等具体表现上。从外表看，工程师所表现出来的是简单、直接、抽象和完美。跟工程师接触能感觉到他们说事情很直接，做事追求完美，喜欢把复杂的事情简单做，不重复发明轮子。不重复发明轮子的意思是</span><span class="bold text-color-yellow">做过一遍的东西就尽量复用</span><span>，复用也体现在工程师的抽象思维上。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">9.2 如何向工程师阐述产品需求</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>讲解产品需求的过程实际上就是</span><span class="bold text-color-yellow">将自己的想法和产品设计方案通过语言表达的方式传递给需求执行者，这里更多的是指工程师。</span><span>在向工程师阐述产品需求的过程中，考验的是产品经理的语言表达能力和换位思考能力，即能否将自己的想法和产品设计方案以工程师能理解的方式和语言传递给对方。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>产品经理可以先从几个方面审视。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>首先，看一下产品功能所涉及的</span><span class="bold text-color-blue">逻辑是否已经完整</span><span>，这里的完整不是指正常的功能逻辑，而是指正常功能逻辑和异常功能逻辑。很多PRD中只包含正常功能逻辑，因为这是大部分用户都会使用到的逻辑，但是在程序实现中，必须考虑而且覆盖到所有的情况，例如当网络异常时该如何处理，当数据加载失败时如何处理，当用户因为一些原因操作中断时产品该如何处理。这些问题都是工程师关心的问题，所以在向工程师阐述产品需求前，先进行自检，拿着逻辑覆盖完整的PRD与工程师沟通，也会让工程师刮目相看。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>其次，在</span><span class="bold text-color-blue">表达方式上</span><span>，尽可能采用第三方讲述法。所谓第三方讲述法就是</span><span class="bold text-color-yellow">站在一个公立的立场上，</span><span>不要把自己的感情色彩带进去，因为人在主观上都只认可自己的观点，如果总是被要求接受别人的观点，就会让人感觉不舒服。所以，产品经理可以用叙事的方式讲述产品需求，例如在讲解一个产品功能时，多用“我们一起来看一下这个问题”、</span><span class="bold text-color-yellow">“用户在使用产品时经常会觉得”</span><span>等这样的方式去讲述，少用“我觉得”“我认为”这样代表自己观点的话语。</span><span class=" text-color-green">多使用通过叙述一个问题的方式阐述问题和沟通，这样既能让对方以解决问题的心态参与到讨论，也能让双方进入一种协商的氛围。如果只是单纯地告知或者表达自己的观点，沟通效率就会比较低，如果碰到一个非常“自负”的工程师，那么沟通过程中难免会出现问题。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">9.3 如何从产品角度参与技术讨论</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>工程师在讨论技术方案时</span><span class="bold text-color-blue">容易改变产品设计需求</span><span>，转为寻找一种实现成本更低的方案和产品经理讨论，如果产品经理自己都不知道为什么要这么设计，那这个产品就是没有灵魂的。</span><span class="bold text-color-yellow">所以，产品经理要想参与技术讨论，首先要做的就是思考每一个设计背后的原因，只有知道了原因，才能真正参与到工程师的技术讨论中，在讨论中维护产品的完整性，然后学习并了解产品的技术实现细节，等下次再针对这个需求做优化或者升级时，产品经理也能做到心中有数，做到真正知其然并知其所以然。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">形象化提问</span><span>就是产品经理利用自己同理心优势，将自己不了解的技术问题通过一种比较形象化的方式描述出来，以提问的方式让工程师帮忙解答，这样既能合理地表达出问题，也能得到工程师的帮助，例如当讨论产品功能所涉及的数据结构时，工程师说了一堆技术术语，这时非技术背景的产品经理可能会听糊涂，如果想让自己理解并且参与进去，最好的做法就是从另一个角度引导问题的讨论。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">9.4 产品需求变动时的沟通方法</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>需求变化时沟通切入点</span></div>
+    <ul class="image-list">
+    <li class="image-item">
+    <img
+      src="https://api2.mubu.com/v3/document_image/0e7dd5b2-98f8-419d-b5b8-fcbb645f117e-1253121.jpg"
+      style="width: 397px;"
+      crossorigin="anonymous"
+      class="image"
+    />
+  </li>
+  </ul>
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">着重讲需求背景能让沟通双方都进入创造变化的过程中，这样后续的沟通就会顺畅很多。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">9.5 非技术背景产品经理的沟通技巧</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>一个由沟通发起方和沟通参与方加入的沟通模型</span></div>
+    <ul class="image-list">
+    <li class="image-item">
+    <img
+      src="https://api2.mubu.com/v3/document_image/bb3916c7-55c2-4cc1-a918-3d70225066ab-1253121.jpg"
+      style="width: 400px;"
+      crossorigin="anonymous"
+      class="image"
+    />
+  </li>
+  </ul>
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>第一步由沟通发起方表达本次沟通的核心观点，</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>第二步根据沟通参与方对于观点的理解和反馈情况，沟通发起方进行初步判断后确认对方对观点的理解程度，</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>第三步对沟通观点进行重复和确认，确保在这个沟通环节中双方的理解是一致的，</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>第四步沟通参与方二次确认理解是无误的。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">经过这几步后能保证信息是有效而且正确传递的，并且能保证沟通的双方在理解上是一致的。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">9.5.1 “这个功能做不了”时怎么办</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">第一个问题，“这个产品需求在现有技术条件下是否可实现，是不是存在技术边界”。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>如果得到的回答是现有技术不可实现，就只能转而寻求新的产品解决方案。例如，我们要在手机App里实现测量人体体温，现有的智能手机并不具备温度传感器，所以存在技术边界。如果得到的回答是在现有技术条件下可以实现，那接着就需要问第二个问题。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">第二个问题，“既然是可实现的，那做不了的原因是否是因为我们目前不具备这样的技术”。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>如果得到的回答是没有技术储备，那现阶段我们就需要寻找技术替代方案。例如，做图片分享的产品需要实现智能读取图片中的文字，那就需要图片识别的技术，这个技术是需要单独研究并使用的。如果得到的回答是技术上没问题，接着问第三个问题。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">第三个问题，“既然不存在技术边界也不存在技术储备不足，那是因为开发进度和时间导致做不了？</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>”如果是因为开发进度和时间导致做不了，那作为产品经理就需要衡量这个产品需求的用户价值和业务价值，也就是说这个产品需求的满足是否会为用户解决棘手问题，是否能在业务上带来增长。如果能满足这两个条件中的一个，哪怕调整开发进度延长时间也是可以接受的。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">9.5.2 “这不是BUG”该如何处理</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>产品经理可以从另一个角度解决问题，以数据加载为空状态为例，产品经理应该让工程师知道这是PRD里没有定义的内容，属于新增的一个小特性，不是工程师的工作有缺失，基于这种认知，接下来就会好办很多。同样是解决一个问题，方法不一样，结果的差异会很大。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">案例分析</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>需求评审会是每个产品经理都会参加的，这个会的主要目的就是和工程师或者相关人员一起针对产品设计进行整体评审。</span><span class="bold text-color-yellow">评审的内容是围绕设计本身从技术实现角度和用户角度进行合理性判断。</span><span>需要注意的是，需求评审会参会的产品经理和工程师各自的视角不一样，工程师代表的是技术思维，而产品经理代表的是产品和用户思维，这两种思维天然就存在一些冲突和矛盾，所以产品需求评审会往往会变得比较激烈。产品经理通过良好且有技巧的沟通能够让需求评审会呈现另外一番景象。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">9.6 用讲故事代替介绍功能</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>以上这些场景无非体现在一个关键问题上，即产品经理用什么方式与目标对象进行沟通。单纯地介绍产品功能听起来很生硬，没有上下文背景也理解不了这个功能背后的具体意义。在与工程师沟通时，只讲功能就会让沟通陷入具体的功能和设计层面的争论，因为谁都对产品有自己的见解，所以很难达成沟通的一致。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>产品经理应该把自己的沟通范围拔高一层，站在功能背后的实际意义角度与目标对象沟通。举个例子，产品经理要往产品中新增一个话题模块，类似于新浪微博中用两个“#”把一个话题标记出来的功能，所有发布信息时携带了同样话题的用户都会被聚拢到同一个话题下。这个功能不复杂，但产品经理在沟通时</span><span class="bold text-color-green">可以从这个功能背后的意义角度展开。</span><span class=" text-color-green">话题功能的意义在于增加同类用户间相互发现的概率，通过同一个话题，把原本没有交集的用户聚集到一起，增加他们之间建立关系的概率和互动的频率，本质是提升产品的用户活跃和互动性。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>从上面这个例子可以看出，</span><span class="bold text-color-blue">通过把产品功能放入一个具体的故事场景中，能大大提高沟通效率，也更利于沟通对象接受产品经理的观点。</span><span>这种讲故事的方式可以运用在产品需求评审会上或者与其他角色的沟通中，切忌只讲产品功能，那样会显得比较生涩。将每一个产品功能都赋予用户价值和业务价值并放入一个故事场景中，通过具有感染力的方式描述产品需求。成为一个优秀的产品经理，这是必备技能之一。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">9.7 本章小结</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading1">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">10 产品经理的自我修养</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">10.1 三种类型的产品经理</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">10.1.1 用户体验型产品经理</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>用户体验包括了</span><span class="bold text-color-yellow">产品功能体验、视觉体验和信息体验</span><span>。用户体验型产品经理更关注产品本身的体验，结合业务目标完成对产品的设计，并持续对产品进行体验层面的优化。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>专注于用户体验设计的产品经理首先得</span><span class="bold text-color-yellow">具备非常强的同理心，得理解目标用户的心理，</span><span>甚至得成为产品的用户才能真正设计出好的产品。用户体验型产品经理千万不要去假设，如果总是假设这么设计或那么设计用户用起来会比较好，最终的结果只会是设计出了一堆无用的功能。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">10.1.2 业务型产品经理</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>业务型产品经理的主要</span><span class="bold text-color-yellow">工作内容是围绕业务流程和业务动作展开的流程设计，业务型产品经理不直接设计产品功能。</span><span>不同公司产品形态不同，产品经理的职责重心也不一样。有的公司偏业务型，所以产品经理的工作中有很大一部分是从产品角度定义业务流程和业务动作。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">有的公司偏产品型（例如工具类产品），工具类产品要求功能符合用户需求和使用习惯，而且能快速帮用户解决问题，这类产品对用户体验的要求很高，所以产品经理的工作重心在核心功能体验的设计上。业务型产品经理每天关注的应该是整个业务流程是否顺畅，每个业务节点是否有可优化的地方。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">业务型产品经理需要具备哪些能力呢？</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>首先是</span><span class="bold text-color-green">全局思维能力</span><span>，需要对整体业务有一个全面的了解，然后定义业务流程中的关键角色及每个角色的具体业务职能和动作，如果涉及业务角色之间的协作，还需要定义具体的协作和衔接方式。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>其次，业务型产品经理还需要具备</span><span class="bold text-color-green">整合资源的能力</span><span>，因为设计的是整个业务流程，所以流程中势必涉及各方的配合和资源提供，如果只是一个单纯的业务流程设计没有资源方的配合，那只能叫一个方案。如果需要最终落地，就要搞定整个业务流程中其他部门或者资源方，确保能提供有效资源。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>最后，业务型产品经理还需要具备一项核心能力，那就是</span><span class="bold text-color-green">沟通</span><span>，或者说这是最基本的能力。因为需要与各方配合共同把整个业务流程落地，所以沟通会起到很重要的作用，通过沟通去传递和达成一致目标是最终事情得以顺利进行的基础。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>对业务型产品经理的</span><span class="bold text-color-green">个人综合能力</span><span>的要求更高，</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class=" text-color-red">一方面需要他有全局独立思考的能力，还需要整合资源方；</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>另一方面得</span><span class=" text-color-red">对产品本身有一定的设计能力</span><span>，可以这么说，业务型产品经理是站在业务和产品十字路口的人，既要具备对业务的敏感度也要从产品角度以产品思维思考整个业务流程的合理性和完整性。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">10.1.3 数据型产品经理</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">包括了数据采集和数据分析，也包括了基于数据分析结果进行产品改进和决策的过程。</span><span>数据型产品经理一定是对数据极为敏感的，而且需要掌握一套方法通过数据衡量产品的直接效果。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-green">除了对产品进行数据验证，数据型产品经理还需要对产品数据进行实时跟踪，提前预判或者事后分析，通过这种预判和分析判断接下来可能发生的事件。</span><span>例如，当某天产品的PV和UV增长较快时，数据型产品经理就需要探究其中的原因，是因为某个现象引发了用户传播引起的产品曝光量增加，还是因为运营活动的效果好使产品活跃数据得到了增长。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">数据型产品经理日常工作中需要去解释、验证、探究与产品相关的数据，需要对数据变动进行业务解释，例如产品活跃度的变化；需要对产品进行数据验证，例如A/B测试；需要对产品进行数据探究，例如如何通过数据驱动产品优化。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">10.2 产品经理的三项核心技能</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">1）让对的事情持续发生</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class=" text-color-yellow">驱动事情向前持续进展，让对的事情持续发生。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>在做产品的过程中会遇到很多问题，比如对一个设计方案的拿捏，对技术限制的规避，对产品节奏与业务和市场节奏的匹配等，这些环节中的任何一环都有可能导致产品向前推进受阻，产品经理需要时刻处于问题一线，</span><span class="bold text-color-green">对随机出现的问题有快速应对能力，快速抓住问题的核心本质，并给出进一步的行动方案。</span><span>也就是说，产品经理在很大程度上必须是</span><span class="bold text-color-green">行动派</span><span>。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">2）让信息高效流动起来</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>就是</span><span class="bold text-color-yellow">沟通</span><span>，而沟通的目的是让信息高效流动起来。作为</span><span class="bold text-color-yellow">承上启下的关键角色</span><span>，使信息流动在一个正确的轨道上，成为信息布道者，确保各个关键角色都能对信息有充分了解，直接决定了能否让对的事情持续发生。挑战恰恰就在这里，产品经理覆盖的沟通面很广，需要对接设计、技术、业务、市场等，这些专业领域内的人都有一套自己的语言系统，产品经理需要时刻切换语系，让自己能在一个正确的频率上对话很重要。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">3）让组织合作顺畅进行</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>趋向于扁平化管理，从老板到推动者到执行层三层架构可能是如今很多互联网公司的组织形态。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">10.3 懂技术不如懂产品</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>是对产品和用户的理解，简单地说就是发掘用户需求，通过产品满足这个需求；</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>通过了解技术实现方法完成一个产品功能。显然，前者是在做产品，而后者是在做功能。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">10.4 为什么懂得这么多还是做不好产品</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>所谓的好产品无非是</span><span class="bold text-color-blue">让用户感觉好，这种感觉不仅包括看起来（视觉）和用起来（功能），还包括价值感（超出预期）和成就感（心理满足），而决定是否成为好产品往往是后二者。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">10.5 设计完功能不等于做好了产品</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>产品生命周期与产品价值</span></div>
+    <ul class="image-list">
+    <li class="image-item">
+    <img
+      src="https://api2.mubu.com/v3/document_image/c0cc5510-b775-4348-a177-f6def2309a51-1253121.jpg"
+      style="width: 400px;"
+      crossorigin="anonymous"
+      class="image"
+    />
+  </li>
+  </ul>
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">坐标轴中横轴代表时间，纵轴代表产品价值</span><span>。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>产品从0起步，在很长一段时间内都在明确产品定位和用户价值，这个阶段实际上处于产品不可见的阶段，因为这时产品功能和界面都还未成型。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">10.6 理解场景比设计功能更重要</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>我们的意识和行为都在一个特定的场景下发生，而对应的产品设计需要符合这个场景。产品不仅有功能，还应该具备符合场景的解决方案。</span></div>
+    
+    
+    
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">1）产品思维与用户场景</span></div>
+    
+    
+    
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">2）数据验证产品假设</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">通过在产品中设置数据埋点，将用户在这个交互路径上的所有动作记录下来，并且通过海量的用户行为数据收集和分析，</span><span>最终发现用户点击“返回”按钮后又连续做了一系列操作，最终停留在其他页面，可能是去看朋友圈，或是再找一个人看其“详细资料”或者是直接退出了微信。如果是这样，之前基于场景的设计就不成立了。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">3）用户反馈驱动产品优化</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>在产品设计中，产品经理应兼具</span><span class="bold text-color-blue">产品思维和用户思维</span><span>。在考虑不同的设计方案时，尽可能地从普遍用户群体的角度考虑，没有绝对好的设计，也没有绝对不好的设计。好与坏取决于产品的普遍用户群固有的使用习惯，而这里大多是基于人性习惯的考虑，例如惯性思维。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">脱离场景的设计会让产品显得生涩</span><span>，每一个业务都有一个主场景</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>张小龙在他的演讲中强调微信的产品观，认为</span><span class="bold text-color-yellow">好产品是人们用完即走的，也就是在当前场景下完成了用户任务，用户就会离开，下次需要重复该任务时，用户还会回来。</span><span>好产品不应该黏住用户，而是应该让用户感觉到</span><span class="bold text-color-green">像水电一样自然</span><span>。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">10.7 产品是技术与艺术的结合</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>对产品经理来说，在工作之余需要学习和了解一些其他知识，比如</span><span class="bold text-color-blue">心理学和用户行为学</span><span>，从这些学科内容里了解人的心理和行为，因为我们的用户都是人，而人本身是具备一定共性的，也就是常说的懂人性。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class=" text-color-green">获取这些知识和能力并不难，需要产品经理自身持续学习，掌握新的知识，体验好的产品，建立一套自己做产品的方法，并且不断优化这套方法，在技术与艺术间寻找平衡点，日积月累就会形成自己对产品对用户的深度洞察力。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">10.8 如何跨越产品经理初级阶段</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>在产品经理的初级阶段，一般会从最基础的工作入手。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">例如，竞品分析、产品文档整理或者设计一些简单功能，这些工作都是初级产品经理的必经之路</span><span class="bold">。在这个过程中，可以</span><span class="bold text-color-green">通过一些方法快速提高自己对产品工作的认知并掌握一些产品工作方法，掌握方法的同时快速实践、不断总结，这就是一个持续进步的过程。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>产品经理初级阶段需要着重锻炼几项能力，首先是</span><span class="bold text-color-blue">写作能力，</span><span>因为产品经理在工作中时常需要将事情完整并且准确地表达给别人，表达的方式无非是文字和语言，</span><span class="bold text-color-blue">语言表达</span><span>需要清晰的口头表达能力，而写作是完整地将事情复述出来的一种最有效的途径。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>写作能力的提升需要先具备更系统化的思维，写作是一个逻辑表达的过程，逻辑表达需要完整的</span><span class="bold text-color-yellow">结构化知识体系</span><span>，建立这个结构化知识体系可以通过阅读或者听的方式，建议读一些介绍完整知识框架的书籍，例如《启示录》是笔者认为完整讲述产品思维和产品工作方法的书。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>在产品经理的日常工作中，最基础的写作素材就是</span><span class="bold text-color-blue">PRD</span><span>,PRD是写给目标读者阅读的，是</span><span class="bold text-color-yellow">表达产品经理设计思路的载体</span><span>，有很多PRD之所以表达不清，很大的原因是因为产品经理写作的思路是基于自己的理解思路。读者的思路不一定按照写作者的思路行进，所以写作过程中需要对内容的全貌有一个清晰地描述。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>例如描述一个产品功能的需求文档，这个功能跟其他两个功能有很高的相关度，变化这个功能会影响其他两个功能，这时在PRD里就需要把这种相关性描述清楚，只有这样，PRD的读者才能基于完整的上下文信息去理解，否则很容易以偏概全。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>另外，除了书面表达能力，</span><span class="bold text-color-blue">语言沟通能力</span><span>也是核心能力之一。锻炼说的环境有很多，例如在产品需求评审会上，产品经理需要向参会的工程师讲述产品需求，工程师会从理性角度听产品经理的讲解，发现产品经理讲述中的问题。这对产品经理来说是一个非常好的实践过程，</span><span class="bold text-color-yellow">通过讲解来整理自己的思路并优化表达方式</span><span>。经过一段时间的锻炼，至少产品经理能把自己的想法说得更清楚。能写能说，基本上具备了一个合格产品经理的特质，在此基础上持续提高自己的能力，就能很快地进入一个新阶段，新阶段就是对思维能力的提高，能在既有现状下提出更具创造性的建议和方案。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">10.9 产品经理如何驱动技术团队</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>在这个过程中，产品经理最初应该做的是</span><span class="bold text-color-blue">与团队中的每一个人熟悉起来</span><span>，都说熟人好办事，道理是一样的，如果跟团队里的成员都不熟，陌生感或者不信任感会让合作不那么容易进行。</span><span class=" text-color-yellow">为了消除这种陌生感，产品经理可以主动和技术团队的人建立关系，可以是平时的闲聊或者一起吃饭，方式有很多种，通过这种频繁的持续互动建立人与人之间的熟悉感，建立彼此的信任感，以后再开展合作就会顺畅很多。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>其次，若想驱动技术团队朝着既定目标努力，光与团队成员打成一片还不够，</span><span class="bold text-color-blue">产品经理必须描绘清晰的产品愿景</span><span>。所谓愿景就是</span><span class=" text-color-yellow">产品需要达到的理想状态和远期目标</span><span>，描述愿景的同时还必须通过路径计划告诉团队成员该如何实现这一愿景。通过不断反复对愿景进行强调，让每一位成员都认可并且相信愿景，统一认识后大家就有了一致的行动力。人在有目标后会对自己所做的事情更加认可，建立在这种认可之上的执行就会具备创造力，机械执行和具备创造力的执行，其结果肯定不一样。</span><span class=" text-color-green">通过树立愿景并持续强化愿景，能把团队的气和力聚集在一起，能真正形成一股绳的力量，抱团共同前进。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">驱动团队做事锻炼产品经理的领导力</span><span>。领导力不是管理能力，管理是行政授权后的行为，而领导力是带领大家朝着共同目标努力，身体力行去行动的过程。领导力能制造和传播氛围，这种氛围是感染团队成员全力向前的动力，在这种氛围里，团队成员会通过实现共同愿景实现个人价值。对产品经理来说，驱动团队做事情是成为产品领导者的前提，而驱动的内因在于构建愿景，使自己和团队都为了这个愿景不断努力。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">10.10 成为产品领导者</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">10.10.1 思想领导力</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">成为产品领导者首先要具备思想领导力，所谓思想领导力就是能在思想层面提出聚焦的观点。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">如何具备思想领导力呢？</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>首先要</span><span class=" text-color-green">对产品所在行业的背景及行业规则有深刻理解，没有一个产品能解决所有问题，所有的产品都是在某一个细分领域解决一个特定的问题。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>对产品经理来说，做产品的前提是对所在行业具备深刻的洞察力。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>获取洞察力可以通过研究行业规则、接触用户、深入一线场景等方式。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>随着在某一行业经验的积累，对业务的认识会逐渐从表面深入核心，这个过程中积累起来的就是洞察力。能说清楚产品解决的用户问题，给行业带来的价值，达成的商业目的，这些看似简单，实则需要深厚的积累。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>其次，思想领导力的形成还体现在</span><span class="bold text-color-yellow">对产品方向和原则的把控上</span><span>，能清醒地判断什么是符合商业战略和产品战略的，有所为有所不为。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">10.10.2 行为领导力</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">行为领导力的本质是带头冲锋，能在组织面对变化和挑战时，从行动上带领产品和团队快速破局。</span><span>产品经理需要非常强的执行力，</span><span class=" text-color-yellow">面对复杂的市场竞争环境，只有快速行动才能时刻应对挑战，从而引领产品朝前发展。每一个促使产品进步的举动都体现着行为领导力，日积月累就会形成产品经理的个人领导力的一部分，这是一个优秀产品经理的必备素质。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>获取行为领导力的方式非常简单，就是</span><span class="bold text-color-yellow">主动加勤奋</span><span>。主动主要表现在</span><span class="bold text-color-green">对一切产品问题的关心</span><span>，大到一个功能流程，小到一个产品文案，并且将这些问题快速落实成解决方案。行为领导力</span><span class="bold text-color-yellow">重在快速行动，</span><span>哪怕方案不是最好的，只要能推动产品向前发展，都是在施展行为领导力。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>勤奋主要体现在产品经理的日常工作中，勤奋的产品经理从来</span><span class="bold text-color-blue">不满足于产品现状</span><span>，他们总能找到更好的方案替代老方案，他们总在寻找新的方式去优化产品。这种勤奋的动力会形成内驱力，以内驱力去做事会激发无限创造力，从而创造出优秀的产品。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">10.10.3 团队领导力</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">团队领导力通过使命愿景及共同的认可来驱动团队。</span><span>这是一种比行政命令更难的方式，也是最有效的方式。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">产品经理在这个过程中需要关注每个团队成员的状态，及时提供帮助和支持，作为团队其他成员来说，大家是因为相信所以才一起努力，产品经理作为方向指引人，需要为团队成员排除一切障碍，起到带头冲锋作用的同时做好后勤保障工作。</span><span>长此以往，团队成员会对产品经理产生信任感，这种信任是驱动团队的最好武器，也是产品经理积累团队领导力的有效方式。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">10.11 本章小结</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading1">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">11 产品经理工作中会遇到的问题及解决方法</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">11.1 解决问题前先定位问题</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>问题区间</span></div>
+    <ul class="image-list">
+    <li class="image-item">
+    <img
+      src="https://api2.mubu.com/v3/document_image/179e81cc-25ae-47c4-a175-b25ec3f96af0-1253121.jpg"
+      style="width: 395px;"
+      crossorigin="anonymous"
+      class="image"
+    />
+  </li>
+  </ul>
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>在这三个范围中判断我们所面临的问题属于哪个区间会有利于我们更快速地解决问题。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>如果判断问题属于</span><span class="bold text-color-blue">能控制的区间</span><span>，</span><span class=" text-color-yellow">那我们就需要快速聚焦到答案上，在问题和答案之间构建解决方案和路径。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>如果判断问题是</span><span class="bold text-color-blue">在能影响的区间</span><span>，</span><span class=" text-color-yellow">说明问题的解决需要外部协助或需要改变一些外部环境，那接下来我们要做的就是去影响问题的进程并改变外部环境，然后将问题过渡到能控制的区间。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>如果问题区间是</span><span class="bold text-color-blue">不能控制的</span><span>，</span><span class=" text-color-yellow">说明问题的可控性很低，是不能影响的，这时我们要做的就是认清问题的现状并向外部寻求帮助。</span><span>若能得到帮助，就将问题过渡到能影响的区间，再进一步过渡到能控制的区间。通过这几步，基本就能对问题进行精确分类，然后对不同类型区间下的问题采取不同的解决方案。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>定位一个问题需要完成两个步骤，</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">第一是找到问题本身的事实情况，</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">第二是判断问题的影响范围。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">11.2 产品经理工作中遇到的问题</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">11.2.1 与老板之间的“不明确”</span></div>
+    
+    
+    
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">11.2.2 与设计师之间的“争论”</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>产品经理在工作中与设计师的“争论”主要体现在两方面，</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">一是对设计目的的理解，二是对设计方式的选择</span><span>。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">11.2.3 与工程师之间的“不理解”</span></div>
+    
+    
+    
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">11.2.4 与业务人员之间的“脱线”</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">业务人员包括一线销售人员、市场人员、商务拓展人员等。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">11.3 “聚焦答案”而非“聚焦问题”</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>“</span><span class="bold text-color-blue">聚焦答案”是一种解决问题的思路和方式，当我们完成对问题的定位后，就需要将思路和注意力转移到寻求问题解决方案的方向上来，“聚焦答案”是寻找问题解决方案的一种引导。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">11.4 一个可能的解决问题模型</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>总结一下主要是三步，第一步</span><span class="bold text-color-blue">完成问题定位</span><span>，第二步</span><span class="bold text-color-blue">找到问题的起始节点</span><span>，第三步</span><span class="bold text-color-blue">递进式聚焦答案</span><span>。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">11.5 从问题和答案中获取洞察力</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">11.6 一个需求从无到有经历了什么</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>明确需求、制定方案，然后把握产品节奏让需求顺利落地，完成从0到1的过程。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">11.7 MVP：化繁为简的方法</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>在现在竞争激烈且同质化竞争严重的环境下，</span><span class="bold text-color-blue">快速响应能力</span><span>会成为一款产品的制胜要诀。应对快速响应有一个理论方法可以采用，那就是MVP（Minimum Viable Product，最小可行性产品）。这个定义来源于精益创业（Lean Startup），如果对精益创业不是很了解，推荐阅读一本书（美国作家Eric Rise写的《精益创业》），这本书比较详尽地介绍了精益创业的三大法宝：</span><span class="bold text-color-blue">最小可行性产品、客户反馈和快速迭代。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">11.8 如何合理地把握产品节奏</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>每个产品都有自己的生命周期，</span><span class="bold text-color-yellow">初始阶段→成长期→成熟期→衰亡期</span><span>，每一步走的是否到位、是否恰如其时，都决定了产品能发挥出多少价值。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>精益创业里强调MVP最小化可行产品，</span><span class="bold text-color-blue">以MVP的理念打造产品，只做当下最重要、最解决核心问题的事情，产品的演化才是健康的。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">11.9 非技术背景产品经理三大生存指南</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">生存指南1：思维切换，技术思维vs.产品思维</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>非技术背景产品经理，先忘记原有背景经验，</span><span class="bold text-color-yellow">从用户视角看待产品，用产品思维设计产品，用技术思维沟通产品实现，能在不同的场景、面向不同角色完成思维切换，是产品经理的核心技能之一。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">生存指南2：技能切换，写文档vs.讲故事</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>PRD是产品经理必做功课之一，尤其是在初级产品阶段，写PRD是这一阶段产品经理的主要工作之一，写PRD需要清晰的逻辑思维能力和文字表达能力，往往一个看似简单的功能实则隐含了很多非常复杂的逻辑。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">生存指南3：沟通切换，自我vs.无我</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>沟通是产品经理进阶路上的必修课，在“自我”和“无我”间的沟通切换，能让沟通来得更轻松。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">11.10 本章小结</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading1">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">12 产品经理的职业发展</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">12.1 产品助理的日常工作及晋级</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">12.1.1 产品助理的日常工作</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>第一是</span><span class="bold text-color-blue">对产品需求的理解和分析</span><span>，配合产品经理进行基础的产品原型设计，也就是画线框图或者做基础的交互设计。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>第二个环节是</span><span class="bold text-color-blue">根据产品需求和产品原型图整理成PRD</span><span>。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>第三个环节是</span><span class="bold text-color-blue">跟进技术开发</span><span>，处理技术开发过程中对需求的疑问，同时跟进产品BUG的解决情况。</span><span class=" text-color-green">产品助理偶尔还需要扮演产品客服的角色，回答公司内部或者外部用户的产品问题，做好产品支持工作。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">12.1.2 产品助理晋级指南</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>需要掌握或者说驾轻就熟的技能主要是</span><span class="bold text-color-blue">需求分析和PRD制作的能力</span><span>，</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>具体就是</span><span class=" text-color-yellow">识别真实需求、过滤伪需求、能画产品原型和做简单的交互设计</span><span>；</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class=" text-color-yellow">能基于需求文档与相关方进行简单的沟通</span><span>；</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class=" text-color-yellow">能处理和跟进产品问题，做好产品客服</span><span>。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">12.2 产品经理的日常工作及晋级</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">12.2.1 产品经理的日常工作</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>产品经理不仅需要写PRD，而且前期的一些</span><span class="bold text-color-blue">需求沟通</span><span>工作主要都是由产品经理完成的。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">12.2.2 产品经理晋级指南</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">1）提高控制需求的能力</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>高阶产品经理对需求分析的理解除了判断合理性外，还会思考需求本身的价值，而价值通常从两个方面体现，</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">第一是基于用户场景带来的用户价值。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">第二是能否强化产品定位。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">2）提高横向协调沟通的能力</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>产品经理需要组织和协调资源，需要将不同专业背景的人组织到一起实现一个共同的目标。在这个过程中，沟通能力就起到关键作用，</span><span class="bold text-color-yellow">面向不同的沟通角色需要使用不同的沟通技巧，目的都是将有利于产品发展和价值提升的资源组织起来。</span><span>提高横向沟通协调能力对产品经理的要求</span><span class="bold text-color-green">除了产品的基本技能外，还需要跨学科的知识</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>横向协调沟通能力是初级产品经理迈向高阶的必备技能，在平时的工作中可以有意识地建立和培养这方面的能力</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">12.3 产品总监的日常工作及晋级</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">12.3.1 产品总监的日常工作</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">产品总监需要定义的是产品战略层的内容，基于产品战略明确产品核心定位和目标用户群，基于目标用户群的特点设计对应的产品功能满足目标用户群的需求。</span><span>与此同时，产品运营人员</span><span class="bold text-color-yellow">会根据产品定位和目标用户群设计具体的运营场景来实现产品用户的拉新、活跃和留存。</span><span>在这个环节中，产品总监需要不断向团队内部强化产品战略和定位。只有这样，大家才是围绕产品在做业务和运营，产品本身才会得到发展。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">12.3.2 产品总监晋级指南</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>对高阶产品经理来说</span><span class="bold text-color-blue">除了要考虑产品战略和产品定位，对产品本身的商业化思考也要纳入职能范围</span><span>，因为所有的产品都是为用户服务的，而产品都是由公司投入资源设计开发出来的，所以如何实现商业化为公司带来收益是高阶产品经理应该考虑的问题。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">12.4 从产品助理到产品总监的跨越</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">12.5 如何系统化地提高产品能力</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">12.5.1 行业理解力</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>行业理解力的提升通常有几种渠道，</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">一是了解行业的最新进展</span><span>，例如医疗行业的产品经理可能要关注国家在医改方面的最新政策，同时需要关注互联网医疗公司中的最新动向，</span><span class="bold text-color-green">大家都在布局什么领域，资本看好哪个领域，这是对大盘的了解。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">二是多参加行业内的分享和讨论</span><span>，</span><span class="bold text-color-green">去听听业内人士对这一领域的理解和判断</span><span>，先让自己坐在“牌桌上”。这两年共享经济特别火，大家都在摸索其中的机会，</span><span class="bold text-color-green">会议是碰撞和交流的最佳场所</span><span>，切忌闭门造车，做产品不是搞科研，而是广开言路和视角。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">12.5.2 产品架构力</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>要提升产品架构能力，</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>一方面是产品经验的积累，</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>另一方面可以通过一些刻意的练习来提高，产品架构能力本质上是一种全局思考和设计的能力，人的思维习惯是擅长处理具体的问题，但从宏观和全局角度来提供解决方案却是另一个维度，针对具体问题对症下药即可，而全局设计并不是解决具体问题，而是构建一个机制和一个环境，让事物在这个机制下良性健康发展。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">12.5.3 商业化思维</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>商业化思维也可以称为</span><span class="bold text-color-blue">流量变现思维</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>互联网的特点是</span><span class="bold text-color-blue">去中心化</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">12.6 本章小结</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading1">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">13 产品经理必懂的运营“技术”</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">13.1 产品与运营的关系</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>互联网圈里有句俗话叫</span><span class="bold text-color-blue">“产品生，运营养”</span><span>，形象比喻了产品和运营之间的关系。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">产品包括产品定义，即产品定位、用户价值、目标用户等，基于产品定义开展产品流程和功能设计，最终将产品呈现出来。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>而运营是围绕产品本身，</span><span class="bold text-color-yellow">通过用户运营、活动运营、内容运营将用户组织起来使用产品，通过运营干预让产品被更多的用户使用，从而产生用户价值。</span><span>产品和运营的结合点就是产品的功能。产品交付的是可被使用的产品功能，运营承接的是一个可用产品，通过一系列的组合运营策略完成对产品的用户拉新、活跃和留存。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">13.2 产品运营与业务运营的区别</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">13.2.1 产品运营</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">活动运营是运营人员利用现有产品功能的组合，面向特定人群组织策划的运营活动，活动的类型分线上活动和线下活动</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">活动运营</span><span class=" text-color-yellow">人员的核心工作是对活动的设计和策划，而设计和策划的落脚点是围绕产品的核心定位和目标用户群体。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">产品运营</span><span class="bold text-color-blue">中第二个环节是内容运营</span><span>。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>从产品角度看，内容运营中内容的产生有两种主要的方式，</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">一种是平台专业生产内容，也就是我们常说的PGC（Professional Generated Content），</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">另一种是用户生产内容，也就是UGC（User Generated Content）。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">这两种方式的差别在于内容的提供主体，前者是专业人士或者是平台编辑，后者是平台上的自由用户。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>产品运营中的第三个环节是</span><span class="bold text-color-blue">用户运营</span><span>。</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>主要包括</span><span class="bold text-color-yellow">用户参与度提升、头部用户运营、用户关系维护</span><span>三个环节。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">用户参与度提升</span><span>主要是与用户保持一定的互动频率，互动的内容可以是有关用户对产品的使用反馈或者建议，也可以是与用户就平台活动产生的互动等。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">头部用户运营</span><span>是指用户运营人员需要寻找和筛选出产品里的种子用户，即那些</span><span class="bold text-color-green">意见领袖</span><span>或者对产品价值特别认可的人群，这些头部用户是非常好的产品种子用户，也是非常好的传播者，头部用户的特点通常是好奇心很强，社交能力和组织能力比较强，通过对头部用户的支持和持续互动，让这些头部用户对平台产生更强的认可度和依赖感。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">用户关系维护</span><span>是用户运营人员对产品用户进行持续正向反馈和激励的过程，用户关系就好比客户关系，需要有人经常维护这种关系。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">13.2.2 业务运营</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>在未来产品领域的发展中，也会越来越需要</span><span class="bold text-color-yellow">“全栈产品经理”</span><span>这样的角色，既能具备过硬的产品和用户体验设计能力，也能对运营有足够的了解，能基于业务目标制定运营方案，能基于产品定义出适合产品的运营策略，这需要产品经理在产品、技术、设计、运营等各个环节建立知识框架，所以，掌握运营的“技术”，对产品经理尤为重要。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">13.3 如何围绕产品设计运营方案</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">13.3.1 产品差异化和运营切入点</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">挖掘差异化用户需求、做场景创新，能够有机会在用户选择增多和集中获取流量难的情况下让产品脱颖而出，带来用户。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">13.3.2 市场选择差异化</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">从上述例子中我们可以看出，在产品体验和交互场景没有更多创新机会的情况下，切入蓝海市场也是让产品获取用户的方法之一。</span><span>如果定位与头部产品相似，获取用户是非常困难的。所以，在产品差异化上，除了功能体验创新，还要让产品深入竞品没有触及的市场，这也是获取用户、产生价值的有效手段。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading3">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">13.3.3 运营方法与效率</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">1.产品启动期：定义产品并明确差异点</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>对处于启动期的早期产品，</span><span class="bold text-color-yellow">站在运营角度的产品策略是明确定义市场定位、主打差异点。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">2.产品成长期：完成用户扩张并提升运营效率</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>度过启动期阶段的产品就会进入成长期，成长期产品的特点是具备一定的用户基础，核心需求明确，运营环节要做的就是让产品的用户范围</span><span class="bold text-color-yellow">扩大到一个新的量级</span><span>。成长期产品侧重在新用户获取和用户留存，与此同时尽可能丰富产品使用场景。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>对新产品之间的竞争，在用户需求和市场环境都确定的情况下，</span><span class="bold text-color-yellow">拼得就是运营效率，谁获取用户的成本低、速度快、质量高，谁的用户留存和活跃度高，谁的单个用户价值大，这些都是运营效率的直接体现。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">3.产品成熟期：商业化运营</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class=" text-color-yellow">随着时代的发展和用户人群结构的更新，产品会进入衰退期，这是客观规律，进入衰退期的产品要么被新的产品形态取代，用户会逐渐迁移到新的产品中，要么谋求转型从而适应新的用户习惯和人群特点。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-blue">4.带着运营思维设计产品</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold text-color-yellow">运营思维是能利用产品功能特点，设计并组合出围绕产品的干预方案。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class=" text-color-green">具体干预的环节包括</span><span class="bold text-color-green">给产品导入新用户、用户在产品内的留存和活跃。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">13.4 如何通过产品杠杆提升运营效率</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span> 产品杠杆效用</span></div>
+    <ul class="image-list">
+    <li class="image-item">
+    <img
+      src="https://api2.mubu.com/v3/document_image/15a8e5e6-315c-4473-bbf4-e03fb08f77a1-1253121.jpg"
+      style="width: 400px;"
+      crossorigin="anonymous"
+      class="image"
+    />
+  </li>
+  </ul>
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>如何用好这个产品杠杆提升运营效率呢？</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>首先，得明确产品的定位和运营目标。</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>如围绕这两个运营目标，可以利用的产品杠杆就非常明确了，无形中就给用户带来了价值，在运营效率上也通过产品实现了提高，这就是通过产品杠杆来提升运营效率的方法。</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading2">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">13.5 本章小结</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading1">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">14 产品经理必懂的技术名词</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node heading2 collapsed">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">14.1 类、对象、抽象和实例</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2 collapsed">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">14.2 工程师口中的“打印”是什么意思</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2 collapsed">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">14.3 工程师口中的“写死”是什么意思</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2 collapsed">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">14.4 架构和框架</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2 collapsed">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">14.5 控件和组件</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2 collapsed">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">14.6 进程与线程</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2 collapsed">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">14.7 什么是“脚本”</span></div>
+    
+    
+    
+  </li>
+<li class="node heading2 collapsed">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">14.8 同步处理和异步处理</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+<li class="node heading1">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span class="bold">整理信息</span></div>
+    
+    
+    <div class="children"><ul class="node-list">
+    <li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>整理人：Sin</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>整理日期：20201229</span></div>
+    
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>公众号：</span><span class="bold text-color-yellow">森逆SinNiI</span></div>
+    <ul class="image-list">
+    <li class="image-item">
+    <img
+      src="https://api2.mubu.com/v3/document_image/f12c3039-f8d5-4679-a4ae-c5e3ef75cfe8-1253121.jpg"
+      style="width: 400px;"
+      crossorigin="anonymous"
+      class="image"
+    />
+  </li>
+  </ul>
+    
+    
+  </li>
+<li class="node">
+    <div class="bullet">
+    <div class="bullet-dot"></div>
+  </div>
+    <div class="content" ><span>关注公众号，获取更多最新内容，希望对您有帮助～</span></div>
+    
+    
+    
+  </li>
+  </ul></div>
+  </li>
+  </ul>
+        
+      </body>
+    </html>
+  
